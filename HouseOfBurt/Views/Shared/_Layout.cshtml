@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+               
+                </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                </ul>
+                
+            </div>
+            @using (Html.BeginForm("Search", "Home"))
+            {
+                @Html.TextBox("search")
+                
+            }
+        </div>
+    </div>
+
+    <div>
+        <aside class="page-sidebar span3 leftaside">
+            <h5 style="color: white">Important Links</h5>
+            <div class="Links">
+                <ul>
+                    
+                    @*@if (ViewBag.SideLinks != null)
+                    {*@
+                        @*foreach (DataContext.Link link in ViewBag.SideLinks)
+                        {
+                            @Html.ActionLink(link.Title, link.Url);
+                        }*@
+                    @*}*@
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <div class="container body-content">
+
+        @RenderBody()
+        <img src=@Url.Content("~/Content/img/Logo.png")/>
+        @*Update-Database –TargetMigration: $InitialDatabase*@
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - House Of Burt Software</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script>
+        function OnSearchClick() {
+            var searchText = $("#txtSearch").val();
+            var queryString = "SearchText=" + searchText;
+            $.post("/Home/Search", queryString, callBackSearch, "_default");
+        }
+    </script>
+</body>
+</html>
