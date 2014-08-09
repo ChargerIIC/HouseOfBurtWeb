@@ -11,6 +11,22 @@ namespace HouseOfBurt.Controllers
     {
         public ActionResult Index()
         {
+            //Grab top five news items
+            ViewBag.BigNewsItems = DataService.Instance.Database.Articles
+                .OrderBy(n => n.CreationDate)
+                .Take(4);
+
+            foreach(Article a in ViewBag.BigNewsItems)
+                a.Content = a.Content.TruncateHtml(150);
+
+            ViewBag.LittleNewsItems = DataService.Instance.Database.Articles
+                .OrderBy(n => n.CreationDate)
+                .Skip(4)
+                .Take(4);
+
+            foreach (Article a in ViewBag.LittleNewsItems)
+                a.Content = a.Content.TruncateHtml(150);
+
             return View();
         }
 

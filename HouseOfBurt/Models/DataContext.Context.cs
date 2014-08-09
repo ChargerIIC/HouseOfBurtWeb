@@ -18,11 +18,8 @@ namespace HouseOfBurt.Models
         public DataContextContainer()
             : base("name=DataContextContainer")
         {
-
         }
-
-        
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

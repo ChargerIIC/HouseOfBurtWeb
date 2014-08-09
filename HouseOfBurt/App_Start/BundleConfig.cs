@@ -23,7 +23,7 @@ namespace HouseOfBurt
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/Content/base/css").Include(
                       "~/Content/css/bootstrap.css",
                       "~/Content/css/site.css"));
 

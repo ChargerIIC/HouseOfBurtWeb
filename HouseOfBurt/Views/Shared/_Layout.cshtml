@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/base/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -16,21 +16,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
-               
-                </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                </ul>
-                
+                @Html.ActionLink("Home", "Index", "Home", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("News", "Index", "Home", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("Products", "Index", "Home", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("Source Code", "Index", "Home", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("Resume", "Index", "Home", null, new { @class = "navbar-brand" })
             </div>
-            @using (Html.BeginForm("Search", "Home"))
-            {
-                @Html.TextBox("search")
-                
-            }
+                @using (Html.BeginForm("Search", "Home"))
+                {
+                    @Html.TextBox("search")
+                }
         </div>
+
     </div>
 
     <div>
@@ -38,10 +35,10 @@
             <h5 style="color: white">Important Links</h5>
             <div class="Links">
                 <ul>
-                    
+
                     @*@if (ViewBag.SideLinks != null)
-                    {*@
-                        @*foreach (DataContext.Link link in ViewBag.SideLinks)
+                        {*@
+                    @*foreach (DataContext.Link link in ViewBag.SideLinks)
                         {
                             @Html.ActionLink(link.Title, link.Url);
                         }*@
@@ -54,8 +51,7 @@
     <div class="container body-content">
 
         @RenderBody()
-        <img src=@Url.Content("~/Content/img/Logo.png")/>
-        @*Update-Database –TargetMigration: $InitialDatabase*@
+        
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - House Of Burt Software</p>

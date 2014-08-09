@@ -23,6 +23,7 @@ namespace HouseOfBurt.Models
         public string Title { get; set; }
         public string Content { get; set; }
         public System.DateTime CreationDate { get; set; }
+        public string PictureUrl { get; set; }
     
         public virtual Link Links { get; set; }
         public virtual ICollection<Category> Categories { get; set; }

@@ -4,111 +4,103 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DataContext.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityContainer Name="DataContextStoreContainer">
-    <EntitySet Name="Links" EntityType="DataContext.Store.Links" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Articles" EntityType="DataContext.Store.Articles" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Categories" EntityType="DataContext.Store.Categories" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Products" EntityType="DataContext.Store.Products" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Versions" EntityType="DataContext.Store.Versions" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="ArticleLink" Association="DataContext.Store.ArticleLink">
-      <End Role="Article" EntitySet="Articles" />
-      <End Role="Link" EntitySet="Links" />
-    </AssociationSet>
-    <AssociationSet Name="ProductVersion" Association="DataContext.Store.ProductVersion">
-      <End Role="Product" EntitySet="Products" />
-      <End Role="Version" EntitySet="Versions" />
-    </AssociationSet>
-    <AssociationSet Name="ArticleCategory" Association="DataContext.Store.ArticleCategory">
-      <End Role="Article" EntitySet="Articles" />
-      <End Role="Category" EntitySet="Categories" />
-    </AssociationSet>
-  </EntityContainer>
-  <EntityType Name="Links">
-    <Key>
-      <PropertyRef Name="LinkId" />
-    </Key>
-    <Property Name="LinkId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Url" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Caption" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Articles">
-    <Key>
-      <PropertyRef Name="ArticleId" />
-    </Key>
-    <Property Name="ArticleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CreationDate" Type="datetime" Nullable="false" />
-    <Property Name="Links_LinkId" Type="int" Nullable="true" />
-  </EntityType>
-  <EntityType Name="Categories">
-    <Key>
-      <PropertyRef Name="CategoryId" />
-    </Key>
-    <Property Name="Tag" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Article_ArticleId" Type="int" Nullable="true" />
-  </EntityType>
-  <EntityType Name="Products">
-    <Key>
-      <PropertyRef Name="ProductId" />
-    </Key>
-    <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="SourceLink" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="IconUrl" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ImageUrl" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ShortDescription" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="FullDescription" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Versions">
-    <Key>
-      <PropertyRef Name="VersionId" />
-    </Key>
-    <Property Name="VersionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="VersionNumber" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="DownloadLink" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Notes" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Product_ProductId" Type="int" Nullable="false" />
-  </EntityType>
-  <Association Name="ArticleLink">
-    <End Role="Article" Type="DataContext.Store.Articles" Multiplicity="*" />
-    <End Role="Link" Type="DataContext.Store.Links" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Link">
-        <PropertyRef Name="LinkId" />
-      </Principal>
-      <Dependent Role="Article">
-        <PropertyRef Name="Links_LinkId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="ProductVersion">
-    <End Role="Product" Type="DataContext.Store.Products" Multiplicity="1" />
-    <End Role="Version" Type="DataContext.Store.Versions" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Product">
-        <PropertyRef Name="ProductId" />
-      </Principal>
-      <Dependent Role="Version">
-        <PropertyRef Name="Product_ProductId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="ArticleCategory">
-    <End Role="Article" Type="DataContext.Store.Articles" Multiplicity="0..1" />
-    <End Role="Category" Type="DataContext.Store.Categories" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Article">
-        <PropertyRef Name="ArticleId" />
-      </Principal>
-      <Dependent Role="Category">
-        <PropertyRef Name="Article_ArticleId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-</Schema></edmx:StorageModels>
+    <Schema Namespace="DataContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Articles">
+          <Key>
+            <PropertyRef Name="ArticleId" />
+          </Key>
+          <Property Name="ArticleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="Links_LinkId" Type="int" />
+          <Property Name="PictureUrl" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HouseOfBurt.dbo.Categories' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="Id" />
+            
+          </Key>
+          <Property Name="Id" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Tag" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Links">
+          <Key>
+            <PropertyRef Name="LinkId" />
+          </Key>
+          <Property Name="LinkId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Url" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Caption" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SourceLink" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IconUrl" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ImageUrl" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ShortDescription" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="FullDescription" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Versions">
+          <Key>
+            <PropertyRef Name="VersionId" />
+          </Key>
+          <Property Name="VersionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VersionNumber" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DownloadLink" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Product_ProductId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ArticleLink">
+          <End Role="Links" Type="Self.Links" Multiplicity="0..1" />
+          <End Role="Articles" Type="Self.Articles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Links">
+              <PropertyRef Name="LinkId" />
+            </Principal>
+            <Dependent Role="Articles">
+              <PropertyRef Name="Links_LinkId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductVersion">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="Versions" Type="Self.Versions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="Versions">
+              <PropertyRef Name="Product_ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DataContextStoreContainer">
+          <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Links" EntityType="Self.Links" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Versions" EntityType="Self.Versions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Categories" EntityType="Self.Categories" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Categories].[Id] AS [Id], 
+    [Categories].[Tag] AS [Tag]
+    FROM [dbo].[Categories] AS [Categories]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_ArticleLink" Association="Self.FK_ArticleLink">
+            <End Role="Links" EntitySet="Links" />
+            <End Role="Articles" EntitySet="Articles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductVersion" Association="Self.FK_ProductVersion">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Versions" EntitySet="Versions" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DataContext" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
@@ -136,8 +128,8 @@
             <PropertyRef Name="LinkId" />
           </Key>
           <Property Name="LinkId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Url" Type="String" Nullable="false" />
-          <Property Name="Caption" Type="String" Nullable="false" />
+          <Property Name="Url" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Caption" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Article" Relationship="DataContext.ArticleLink" FromRole="Link" ToRole="Article" />
         </EntityType>
         <EntityType Name="Article">
@@ -146,10 +138,11 @@
           </Key>
           <Property Name="ArticleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Links" Relationship="DataContext.ArticleLink" FromRole="Article" ToRole="Link" />
-          <Property Name="Title" Type="String" Nullable="false" />
-          <Property Name="Content" Type="String" Nullable="false" />
-          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Categories" Relationship="DataContext.ArticleCategory" FromRole="Article" ToRole="Category" />
+          <Property Name="PictureUrl" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="ArticleLink">
           <End Type="DataContext.Article" Role="Article" Multiplicity="*" />
@@ -158,22 +151,24 @@
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="CategoryId" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Tag" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="Tag" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Article" Relationship="DataContext.ArticleCategory" FromRole="Category" ToRole="Article" />
           <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
             <PropertyRef Name="ProductId" />
           </Key>
           <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SourceLink" Type="String" Nullable="false" />
-          <Property Name="IconUrl" Type="String" Nullable="false" />
-          <Property Name="ImageUrl" Type="String" Nullable="false" />
-          <Property Name="Name" Type="String" Nullable="false" />
-          <Property Name="ShortDescription" Type="String" Nullable="false" />
-          <Property Name="FullDescription" Type="String" Nullable="false" />
+          <Property Name="SourceLink" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="IconUrl" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ImageUrl" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ShortDescription" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="FullDescription" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Versions" Relationship="DataContext.ProductVersion" FromRole="Product" ToRole="Version" />
         </EntityType>
         <EntityType Name="Version">
@@ -181,9 +176,9 @@
             <PropertyRef Name="VersionId" />
           </Key>
           <Property Name="VersionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="VersionNumber" Type="String" Nullable="false" />
-          <Property Name="DownloadLink" Type="String" Nullable="false" />
-          <Property Name="Notes" Type="String" Nullable="false" />
+          <Property Name="VersionNumber" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="DownloadLink" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Notes" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Product" Relationship="DataContext.ProductVersion" FromRole="Version" ToRole="Product" />
         </EntityType>
         <Association Name="ProductVersion">
@@ -212,7 +207,8 @@
     <EntitySetMapping Name="Articles">
       <EntityTypeMapping TypeName="IsTypeOf(DataContext.Article)">
         <MappingFragment StoreEntitySet="Articles">
-          <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+          <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Content" ColumnName="Content" />
           <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
@@ -222,8 +218,8 @@
     <EntitySetMapping Name="Categories">
       <EntityTypeMapping TypeName="IsTypeOf(DataContext.Category)">
         <MappingFragment StoreEntitySet="Categories">
-          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -268,14 +264,7 @@
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="ArticleCategory" TypeName="DataContext.ArticleCategory" StoreEntitySet="Categories">
-      <EndProperty Name="Article">
-        <ScalarProperty Name="ArticleId" ColumnName="Article_ArticleId" />
-      </EndProperty>
-      <EndProperty Name="Category">
-        <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-      </EndProperty>
-      <Condition ColumnName="Article_ArticleId" IsNull="false" />
-    </AssociationSetMapping>
+      </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>
@@ -292,6 +281,7 @@
         <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
         <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->

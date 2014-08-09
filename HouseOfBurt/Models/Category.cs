@@ -16,6 +16,7 @@ namespace HouseOfBurt.Models
     {
         public string Tag { get; set; }
         public int CategoryId { get; set; }
+        public string Id { get; set; }
     
         public virtual Article Article { get; set; }
     }
