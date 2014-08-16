@@ -115,46 +115,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\ContentLocalization.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContentLocalization.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\StringUtility.cs" />
+    <Compile Include="Migrations\201408102141071_InitialCreate.cs" />
+    <Compile Include="Migrations\201408102141071_InitialCreate.Designer.cs">
+      <DependentUpon>201408102141071_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408110034147_PictureUrlUpdate.cs" />
+    <Compile Include="Migrations\201408110034147_PictureUrlUpdate.Designer.cs">
+      <DependentUpon>201408110034147_PictureUrlUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\Link.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Version.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\StringUtility.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Article.cs">
-      <DependentUpon>DataContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ArticleCode.cs" />
-    <Compile Include="Models\Category.cs">
-      <DependentUpon>DataContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DataContext.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataContext.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DataContext.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DataContext.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataContext.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Article.cs" />
     <Compile Include="Models\DataService.cs" />
-    <Compile Include="Models\Link.cs">
-      <DependentUpon>DataContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Product.cs">
-      <DependentUpon>DataContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Version.cs">
-      <DependentUpon>DataContext.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -162,10 +156,15 @@
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\img\FileZapper.png" />
+    <Content Include="Content\img\GeekWiseLogo.jpg" />
+    <Content Include="Content\img\HPWarrantyReporter.PNG" />
     <Content Include="Content\img\Logo.png" />
+    <Content Include="Content\img\MonoGameLogo_512px.png" />
     <Content Include="Content\img\MonogameTier.png" />
     <Content Include="Content\img\MVC.png" />
     <Content Include="Content\img\Search-icon.png" />
+    <Content Include="Content\img\ServiceTagReporter150.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -175,25 +174,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\css\bootstrap-theme.css.map" />
     <Content Include="Content\css\bootstrap.css.map" />
-    <EntityDeploy Include="Models\DataContext.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DataContext.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\DataContext.edmx.diagram">
-      <DependentUpon>DataContext.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\DataContext.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DataContext.Context.cs</LastGenOutput>
-      <DependentUpon>DataContext.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\DataContext.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DataContext.cs</LastGenOutput>
-      <DependentUpon>DataContext.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
-    <Content Include="Models\DataContext.edmx.sql" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -238,9 +219,28 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="App_GlobalResources\ContentLocalization.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ContentLocalization.Designer.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="Migrations\201408102141071_InitialCreate.resx">
+      <DependentUpon>201408102141071_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408110034147_PictureUrlUpdate.resx">
+      <DependentUpon>201408110034147_PictureUrlUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

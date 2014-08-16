@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Article10Content" xml:space="preserve">
+    <value>&lt;p&gt;
+Effective training in Fresno, CA&lt;/p&gt;
+&lt;p&gt;
+When I decided to move the HouseOfBurt webpage form it's original &lt;a href="http://houseofburt.wordpress.com/"&gt;Wordpress-default themed glory&lt;/a&gt; it quickly became obvious out that my HTML skills from 1997 were not going to be of much help in the Modern Web. I took the introductory course in HTML 5/Javascript from &lt;a href="http://www.codecademy.com/"&gt;Codeademy&lt;/a&gt;, but wanted to get something more in-depth. Luckily for myself I happen to live in Fresno, CA, home to &lt;a href="http://geekwiseacademy.com/"&gt;GeekWise Academy&lt;/a&gt;. The academy offers 6-week courses in several technologies - mostly ones requested by local employers. I chose the responsive web design course specifically for the CSS and HTML 5 training.&lt;/p&gt;
+&lt;p&gt;
+The experience was a pleasant surprise, my instructor was a professional web developer, and assignments were often approached in the same manner as those in the industry. We would have a mock-up and need to reproduce it in HTML/CSS. The instructor would show us how to handle some of the more difficult parts and assist when we got stuck. All in all there was a lot of freedom in the class and we were encouraged to experiment. Offically we were taught Twitter Bootstrap and Pure CSS for our frameworks, but I was able to translate a lot of it to the Metro UI CSS that this site uses.&lt;/p&gt;
+&lt;p&gt;
+Geekwise may represent a solution to an common problem in the development field - a way to get the slices of knowledge a developer may find themselves needing while still being able to learn in an interactive environment. I hope we see more initiatives like this in the future.&lt;/p&gt;</value>
+  </data>
+  <data name="Article11Content" xml:space="preserve">
+    <value>&lt;p&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="Article1Content" xml:space="preserve">
+    <value>&lt;p&gt;Welcome to the home of HouseOfBurt. Here you will find access to several utilities that are targeted towards making life with computers a little easier than they are now. You can look at the current software offerings under the &lt;a title="Products" href="http://houseofburt.wordpress.com/products/"&gt;Products&lt;/a&gt; page. If you have any questions/comments please feel free to contact me.&lt;/p&gt;</value>
+  </data>
+  <data name="Article2Content" xml:space="preserve">
+    <value>&lt;p&gt;Version 1.4 of Service Tag Reporter has been released. This release uses the new Dell SOAP service to retrieve accurate information directly from Dell&amp;#8217;s Asset tracking servers. Several other speed improvements have been included as well.&lt;/p&gt;
+&lt;p&gt;Service Tag reporter is a software based utility that fetches Dell warranty information from Dell&amp;#8217;s servers.&lt;br /&gt;
+Enter in the desired service tags into the left hand input window and click &amp;#8216;Query Tags&amp;#8217; to get a list of products and their&lt;br /&gt;
+associated warranties. If you need to find out the service tag of a remote workstation in your network enter the machine name&lt;br /&gt;
+or IP address next to the &amp;#8216;Find Tag&amp;#8217; button. Click on the button and the service tag will be added to the input box.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://houseofburt.files.wordpress.com/2012/02/screenshot1.png"&gt;&lt;img class="size-thumbnail wp-image-12" title="ServiceTagReporter14 Screenshot" src="http://houseofburt.files.wordpress.com/2012/02/screenshot1.png?w=150&amp;#038;h=127" alt="Service Tag Reporter" width="150" height="127" /&gt;&lt;/a&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="Article3Content" xml:space="preserve">
+    <value>&lt;p&gt;Version 1.2 of File Zapper has been released. This release has a revamped GUI and uses a quicker and more secure connection method to remote workstations&lt;/p&gt;
+&lt;p&gt;File Zapper allows for the removal of unwanted files on multiple machines remotely. The application connects to each specified machine and uses the current user’s credentials to effect removal of the desired file or folder. Verbose logging is included and the application is capable of clearing both individual files and folders.&lt;/p&gt;
+&lt;a href="http://houseofburt.files.wordpress.com/2012/05/filezapperscreenshot.png"&gt;&lt;img class="size-thumbnail wp-image-40" title="FileZapperScreenshot" src="http://houseofburt.files.wordpress.com/2012/05/filezapperscreenshot.png?w=100&amp;#038;h=150" alt="" width="100" height="150" /&gt;&lt;/a&gt;&lt;p class="wp-caption-text"&gt;Screenshot&lt;/p&gt;</value>
+  </data>
+  <data name="Article4Content" xml:space="preserve">
+    <value>&lt;p&gt;Version 1.4.1 of Service Tag Reporter has been released. This release features additional speed improvements when querying large numbers of Service Tags and Bug Fixes. If you have any questions/comments let me know!&lt;/p&gt;
+&lt;p&gt;&lt;a title="Service Tag Reporter Download" href="http://db.tt/wmDB9FGf"&gt;Download it here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;About Service Tag Reporter&lt;/p&gt;
+&lt;p&gt;Service Tag reporter is a software based utility that fetches Dell warranty information from Dell’s servers.&lt;br /&gt;
+Enter in the desired service tags into the left hand input window and click ‘Query Tags’ to get a list of products and thier&lt;br /&gt;
+associated warranties. If you need to find out the service tag of a remote workstation in your network enter the machine name&lt;br /&gt;
+or IP address next to the ‘Find Tag’ button. Click on the button and the service tag will be added to the input box.&lt;/p&gt;
+&lt;a href="http://houseofburt.files.wordpress.com/2012/02/screenshot1.png"&gt;&lt;img class="size-thumbnail wp-image-12" title="ServiceTagReporter14 Screenshot" src="http://houseofburt.files.wordpress.com/2012/02/screenshot1.png?w=150&amp;#038;h=127" alt="Service Tag Reporter" width="150" height="127" /&gt;&lt;/a&gt;&lt;p class="wp-caption-text"&gt;Service Tag Reporter&lt;/p&gt;</value>
+  </data>
+  <data name="Article5Content" xml:space="preserve">
+    <value>&lt;p&gt;Version 1.1 of &lt;a title="HP Warranty Reporter" href="http://houseofburt.herokuapp.com/products/1"&gt;HP Warranty Reporter&lt;/a&gt; has been released. This release includes GUI updates and no longer requires the user to know the product code for warranty retrieval.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://houseofburt.files.wordpress.com/2012/05/screenshot.png"&gt;&lt;img title="HP Warranty Reporter Screenshot" src="http://houseofburt.files.wordpress.com/2012/05/screenshot.png?w=150&amp;#038;h=84" alt="HP Warranty Reporter"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a title="HP Warranty Reporter Download" href="http://db.tt/OwsMEwB7"&gt;Download Here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;HP Warranty Reporter pulls HP warranty information from HP’s website for serial numbers you specify. It includes support for list entry and can pull information for either computers or printers. Enter in the desired serial numbers into the left hand input window and click ‘Find Warranties’ to get a list of products and their associated warranties. If the product is found in the HP database it will update on the ship date, warranty expiration date and the official model name.&lt;/p&gt;</value>
+  </data>
+  <data name="Article6Content" xml:space="preserve">
+    <value>&lt;p&gt;HP updated their website recently and the older 1.1 versions of HP Warranty Reporter started having problems parsing warranty data properly. An update has been released &lt;a title="HP Warranty Reporter Download" href="http://db.tt/ERPKxCmw"&gt;here&lt;/a&gt; that contains a new EXE that parses warranty dates properly. We are recommending that everyone use the new EXE and not the old one.&lt;/p&gt;</value>
+  </data>
+  <data name="Article7Content" xml:space="preserve">
+    <value>&lt;p&gt;Service Tag Reporter version 1.5 is a performance and usability upgrade. New features include:&lt;/p&gt;
+&lt;p&gt;* better performance of large set of service tags&lt;/p&gt;
+&lt;p&gt;* more informative feedback if the a service tag cannot be requested remotely&lt;/p&gt;
+&lt;p&gt;* the ability to hide the &amp;#8216;Query Service Tag Remotely&amp;#8217; option if you don&amp;#8217;t want it&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://houseofburt.files.wordpress.com/2013/09/servicetagreporter150.png"&gt;&lt;img alt="Image" src="http://houseofburt.files.wordpress.com/2013/09/servicetagreporter150.png?w=579" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;About Service Tag Reporter:&lt;/p&gt;
+&lt;p&gt;Service Tag reporter is a software based utility that fetches warranty information from Dell&amp;#8217;s Warranty tracking servers.&lt;br /&gt;Enter in the desired service tags into the left hand input window and click &amp;#8216;Query Tags&amp;#8217; to get a list of products and their &lt;br /&gt;associated warranties. If you need to find out the service tag of a remote workstation in your network enter the machine name or IP address next to the &amp;#8216;Find Tag&amp;#8217; button. Click on the button and the service tag will be added to the input box.&lt;/p&gt;</value>
+  </data>
+  <data name="Article8Content" xml:space="preserve">
+    <value>&lt;p&gt;I recently gave a talk at the Central California .Net User Group about &lt;a href="http://monogame.net/"&gt;Monogame&lt;/a&gt;. It was my first major speaking engagement since becoming a professional developer and I was glad to share about a technology I've enjoyed using. For those who may be unfamiliar with the technology, Monogame is an Open Source implementation of Microsoft's XNA framework. XNA was built initially with the goal of making it easy to build games for Microsoft devices like the XBox or Windows Phone, but Monogame has expanded this selection to a huge array of devices and operating systems, from the Nintendo Wii to the venerable Linux operating system.&lt;br&gt;
+Getting started in Monogame can be pretty daunting - there's a lot of new concepts to learn and API calls to learn. This is doubly true for anyone who comes from a traditional application development bacckground. I wanted to offer three pieces of advice for anyone starting out with Monogame: &lt;/p&gt;
+&lt;br&gt;
+&lt;strong&gt;1) Learn the high-level architecture&lt;/strong&gt; 
+&lt;p&gt;The hardest part of learning Monogame is understanding how the architecture functions. Most tutorials and books feed you the individual bits piecemeal and its not always clear how they all work together. This is especially important because the model is so different from typical application development. In application development you usually have  a User Interface (views) that talks to controllers which in turn talk to your model(usually a database or some for of information storage). This is a pretty linear pattern:&lt;/p&gt;
+&lt;img src="/static/media/mvc.png" width=25% /&gt;
+&lt;br&gt;
+&lt;p&gt;Now this is a pretty high-level view of most Monogame projects:&lt;/p&gt;
+&lt;img src="/static/media/MonogameHier.png" width=25% /&gt;
+&lt;br&gt;
+&lt;p&gt;As you can see your things are much more 'flat' in a typical Monogame. Your game object communicates with your Objects(Model) controller, your Gamestate controller, and your Input/Output controllers. This items aren't hierarchal like they are in a typical MVC application, and it's not unusual for the Gamestates to communicate directly with the input controllers or vice-versa. Still, taking some time to ask yourself which of the three tiers your next class is going to fit in will help you understand just why class X is calling Y instead of class Z.&lt;/p&gt;
+&lt;strong&gt;2) Run through a good tutorial or book &lt;/strong&gt;
+&lt;p&gt;I learned XNA mostly through bits and pieces - modifying other people's code, researching  how to do things and googling when all else failed. These are valuable learning tools but it meant I often was creating coding messes in which I couldn't have told what was happening. Monogame uses a very large amount of built-in objects and classes to take a lot of the hard work away from you but it is still important to learn what these objects and classes do. My first recommendation is going through the XNA RPG tutorial here: &lt;a href="http://xnagpa.net/xna4rpg.php"&gt;http://xnagpa.net/xna4rpg.php&lt;/a&gt;. The tutorial are free, and although they are made for XNA, I was able to re-follow them in Monogame when I switched over without trouble as the code is the same. For those who want to take the book approach, there is the &lt;a href="http://shop.oreilly.com/product/0790145310187.do"&gt;Microsoft XNA book&lt;/a&gt; designed to give you the basics, and at least two books now on market that use Monogame directly (&lt;a href="http://www.apress.com/9781430258360"&gt;Windows 8 and Windows Phone 8 Game Development&lt;/a&gt;, &lt;a href="http://www.amazon.com/dp/1466501898/"&gt;2D Graphics Programming for Games&lt;/a&gt;).&lt;/p&gt;  
+&lt;strong&gt;3) Keep a finished project handy for reference&lt;/strong&gt;
+&lt;p&gt;In addition to the final download of the &lt;a href="http://xnagpa.net/xna4/downloads/EyesOfTheDragon31.zip"&gt;XNARPG series&lt;/a&gt;, there is also the &lt;a href="http://monogame.codeplex.com/"&gt;starter kits&lt;/a&gt; that give a good example of what a completed Monogame project can look like. I have found these invaluable when I desperately trying to figure out how best to approach an issue that's been handled by every game out there like Menus, Network code, and handling pixel effects. Having a completed project open does come with one caveat: Never, never let yourself copy and paste code from the completed project. This always ends with some piece of code that was never really meant to be in your project being shoehorned in. Instead allow yourself to transcribe the relevant bit of code, inserting your own variable and references. You will thank you self later.&lt;/p&gt;</value>
+  </data>
+  <data name="Article9Content" xml:space="preserve">
+    <value>&lt;p&gt;Service Tag Reporter version 1.6 is a major perofrmance enhancement. New features include:&lt;/p&gt;
+&lt;p&gt;* better performance in fetching warranties&lt;/p&gt;
+&lt;p&gt;* invalid service tags no longer populate the results grid&lt;/p&gt;
+&lt;p&gt;* Dells warranty servers starting reporting the presence of 'digital warranties' that only provided software download protection. These are now discarded&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://houseofburt.files.wordpress.com/2013/09/servicetagreporter150.png"&gt;&lt;img alt="Image" src="http://houseofburt.files.wordpress.com/2013/09/servicetagreporter150.png?w=579" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;About Service Tag Reporter:&lt;/p&gt;
+&lt;p&gt;Service Tag reporter is a software based utility that fetches warranty information from Dell&amp;#8217;s Warranty tracking servers.&lt;br /&gt;Enter in the desired service tags into the left hand input window and click &amp;#8216;Query Tags&amp;#8217; to get a list of products and their &lt;br /&gt;associated warranties. If you need to find out the service tag of a remote workstation in your network enter the machine name or IP address next to the &amp;#8216;Find Tag&amp;#8217; button. Click on the button and the service tag will be added to the input box.&lt;/p&gt;</value>
+  </data>
+</root>

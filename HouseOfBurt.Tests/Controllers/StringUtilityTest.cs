@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 using FluentAssertions;
-using HouseOfBurt.Controllers;
+using HouseOfBurt.Utilities;
 
 namespace HouseOfBurt.Tests.Controllers
 {
