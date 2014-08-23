@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header"><h2>@ViewBag.Header</h2></div><br/>
+
+<div class="container">
+
+    @foreach (Article newsArticle in ViewBag.NewsItems)
+    {
+        <img src=@Url.Content(newsArticle.PictureUrl) width="50%"/>
+        <p></p>
+        <h2>@newsArticle.Title</h2>
+        <p></p>
+        <p>@Html.Raw(newsArticle.Content)</p>
+    }
+</div>
+

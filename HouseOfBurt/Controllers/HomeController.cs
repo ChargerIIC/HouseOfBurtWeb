@@ -46,5 +46,10 @@ namespace HouseOfBurt.Controllers
 
             return View();
         }
+
+        public ActionResult Resume()
+        {
+            return View();
+        }
     }
 }

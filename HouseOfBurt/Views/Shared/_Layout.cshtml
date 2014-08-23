@@ -7,66 +7,130 @@
     @Styles.Render("~/Content/base/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <body>
+        
+        @*
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Home", "Index", "Home", null, new { @class = "navbar-brand" })
-                @Html.ActionLink("News", "Index", "Home", null, new { @class = "navbar-brand" })
-                @Html.ActionLink("Products", "Index", "Home", null, new { @class = "navbar-brand" })
-                @Html.ActionLink("Source Code", "Index", "Home", null, new { @class = "navbar-brand" })
-                @Html.ActionLink("Resume", "Index", "Home", null, new { @class = "navbar-brand" })
+                <a class="navbar-brand" href="#">House Of Burt</a>
             </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../navbar/">Default</a></li>
+                    <li><a href="../navbar-static-top/">Static top</a></li>
+                    <li class="active"><a href="./">Fixed top</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+        *@
+
+        <div role="navigation" class="navbar navbar-default navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <ul class="nav navbar-nav navbar-inverse">
+                        <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "navbar-brand" })</li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">News <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>@Html.ActionLink("Software News", "Category", "News", new { @category = "Software"}, new { @role="menuitem"})</li>
+                                <li>@Html.ActionLink("Blog Posts", "Category", "News", new { @category = "Personal"},new { @role="menuitem" })</li>
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("All News", "Index", "News", null, new { @role="menuitem"})</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>@Html.ActionLink("Service Tag Reporter", "Product", "Product")</li>
+                                <li>@Html.ActionLink("HP Warranty Reporter", "Product", "Product")</li>
+                                <li>@Html.ActionLink("File Zapper", "Product", "Product")</li>
+                                <li>@Html.ActionLink("All Products", "Index", "Product")</li>
+                            </ul>
+                        </li>
+                        <li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Source Code<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="https://bitbucket.org/HouseOfBurt/service-tag-reporter/src">Service Tag Reporter Repo<span class="caret"></span></a></li>
+                                <li>@Html.ActionLink("All Products", "Index", "Product")</li>
+                            </ul>
+                        </li>
+                        <li>@Html.ActionLink("Resume", "Resume", "Home")</li>
+                    </ul>
+                </div>
                 @using (Html.BeginForm("Search", "Home"))
                 {
-                    @Html.TextBox("search")
+                    @Html.TextBox("search",null, new{ @class="pull-right"})
                 }
+            </div>
+
         </div>
 
-    </div>
+        <div>
+            <aside class="page-sidebar span3 leftaside">
+                <h5 style="color: white">Important Links</h5>
+                <div class="Links">
+                    <ul>
 
-    <div>
-        <aside class="page-sidebar span3 leftaside">
-            <h5 style="color: white">Important Links</h5>
-            <div class="Links">
-                <ul>
-
-                    @*@if (ViewBag.SideLinks != null)
+                        @*@if (ViewBag.SideLinks != null)
                         {*@
-                    @*foreach (DataContext.Link link in ViewBag.SideLinks)
+                        @*foreach (DataContext.Link link in ViewBag.SideLinks)
                         {
                             @Html.ActionLink(link.Title, link.Url);
                         }*@
-                    @*}*@
-                </ul>
-            </div>
-        </aside>
-    </div>
+                        @*}*@
+                    </ul>
+                </div>
+            </aside>
+        </div>
 
-    <div class="container body-content">
+        <div class="container body-content">
 
-        @RenderBody()
+            @RenderBody()
         
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - House Of Burt Software</p>
-        </footer>
-    </div>
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - House Of Burt Software</p>
+            </footer>
+        </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-    <script>
-        function OnSearchClick() {
-            var searchText = $("#txtSearch").val();
-            var queryString = "SearchText=" + searchText;
-            $.post("/Home/Search", queryString, callBackSearch, "_default");
-        }
-    </script>
-</body>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+        <script>
+            function OnSearchClick() {
+                var searchText = $("#txtSearch").val();
+                var queryString = "SearchText=" + searchText;
+                $.post("/Home/Search", queryString, callBackSearch, "_default");
+            }
+        </script>
+    </body>
 </html>

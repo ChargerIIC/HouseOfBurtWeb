@@ -1,16 +1,14 @@
 using System.Collections.Generic;
-using System.Web.UI.WebControls;
-//using Resources;
 using HouseOfBurt.Models;
-using System;
-using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using System.Linq;
 
 namespace HouseOfBurt.Migrations
 {
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<DataContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<HouseOfBurt.Models.DataContext>
     {
         private Category personalCategory;
         private Category softwareCategory;
@@ -63,10 +61,10 @@ namespace HouseOfBurt.Migrations
 
         private void seedCategories(DataContext context)
         {
-            personalCategory = new Category {Caption = "Personal", CategoryId = 1};
-            softwareCategory = new Category {Caption = "Software", CategoryId = 2};
-            webCategory = new Category {Caption = "Website", CategoryId = 3};
-            context.Categories.AddOrUpdate(personalCategory, softwareCategory, webCategory );
+            personalCategory = new Category { Caption = "Personal", CategoryId = 1 };
+            softwareCategory = new Category { Caption = "Software", CategoryId = 2 };
+            webCategory = new Category { Caption = "Website", CategoryId = 3 };
+            context.Categories.AddOrUpdate(personalCategory, softwareCategory, webCategory);
         }
 
         private void seedArticles(DataContext context)

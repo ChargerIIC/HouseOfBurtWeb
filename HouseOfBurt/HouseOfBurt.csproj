@@ -124,14 +124,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Migrations\201408102141071_InitialCreate.cs" />
-    <Compile Include="Migrations\201408102141071_InitialCreate.Designer.cs">
-      <DependentUpon>201408102141071_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201408110034147_PictureUrlUpdate.cs" />
-    <Compile Include="Migrations\201408110034147_PictureUrlUpdate.Designer.cs">
-      <DependentUpon>201408110034147_PictureUrlUpdate.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\DataContext.cs" />
@@ -208,6 +202,10 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\Product.cshtml" />
+    <Content Include="Views\Home\Resume.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -228,12 +226,6 @@
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>ContentLocalization.Designer.cs</LastGenOutput>
     </Content>
-    <EmbeddedResource Include="Migrations\201408102141071_InitialCreate.resx">
-      <DependentUpon>201408102141071_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201408110034147_PictureUrlUpdate.resx">
-      <DependentUpon>201408110034147_PictureUrlUpdate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
