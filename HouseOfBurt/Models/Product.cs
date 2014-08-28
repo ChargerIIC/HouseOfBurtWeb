@@ -14,6 +14,14 @@ namespace HouseOfBurt.Models
         public string ImageUrl { get; set; }
         public string Description { get; set; }
 
-        public List<Version> Versions { get; set; }
+        ICollection<Version> versions;
+        public virtual ICollection<Version> Versions
+        {
+            get
+            {
+                return versions = versions ?? new HashSet<Version>();
+            }
+            set { versions = value; }
+        }
     }
 }

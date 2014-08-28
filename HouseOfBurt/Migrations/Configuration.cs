@@ -26,10 +26,15 @@ namespace HouseOfBurt.Migrations
         private Link link10;
         private Link link11;
 
+        private Product serviceTag;
+        private Product hpWarranty;
+        private Product fileZap;
+        private Product dealORound;
+
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "HouseOfBurt.Models.DataContext";
+            ContextKey = "HouseOfBurt.DataContext";
         }
 
         protected override void Seed(DataContext context)
@@ -38,8 +43,38 @@ namespace HouseOfBurt.Migrations
             seedCategories(context);
             seedLinks(context);
             seedArticles(context);
+            seedProducts(context);
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
+        }
+
+        private void seedProducts(DataContext context)
+        {
+            serviceTag = new Product { ProductId = 1, Name = "Service Tag Reporter", 
+                ImageUrl = @"http://houseofburt.files.wordpress.com/2013/09/servicetagreporter150.png", 
+                Description = Properties.Resources.ServiceTagDescription, SourceLink = link4};
+            serviceTag.Versions = new List<Models.Version>
+            {
+                new Models.Version { VersionId = 1, VersionNumber = "1.0.0.0", ReleaseNotes = Properties.Resources.ServiceTagVersion1 },
+                new Models.Version { VersionId = 2, VersionNumber = "1.1.0.0", ReleaseNotes = Properties.Resources.ServiceTagVersion2 },
+                new Models.Version { VersionId = 3, VersionNumber = "1.1.0.1", ReleaseNotes = Properties.Resources.ServiceTagVersion3 },
+                new Models.Version { VersionId = 4, VersionNumber = "1.1.2.0", ReleaseNotes = Properties.Resources.ServiceTagVersion4 },
+                new Models.Version { VersionId = 5, VersionNumber = "1.1.3.0", ReleaseNotes = Properties.Resources.ServiceTagVersion5 },
+                new Models.Version { VersionId = 6, VersionNumber = "1.4.0.0", ReleaseNotes = Properties.Resources.ServiceTagVersion6 },
+                new Models.Version { VersionId = 8, VersionNumber = "1.4.1.0", ReleaseNotes = Properties.Resources.ServiceTagVersion7 },
+                new Models.Version { VersionId = 9, VersionNumber = "1.4.1.1", ReleaseNotes = Properties.Resources.ServiceTagVersion8 },
+                new Models.Version { VersionId = 10, VersionNumber = "1.5.0.0", ReleaseNotes = Properties.Resources.ServiceTagVersion9 },
+                new Models.Version { VersionId = 12, VersionNumber = "1.6.0.0", ReleaseNotes = Properties.Resources.ServiceTagVersion10 }
+            };
+            hpWarranty = new Product {ProductId = 2,Name = "HP Warranty Reporter",
+                ImageUrl = @"http://houseofburt.files.wordpress.com/2012/05/screenshot.png",
+                Description = Properties.Resources.HpWarrantyDescription, SourceLink = link5};
+            hpWarranty.Versions= new List<Models.Version> {new Models.Version { VersionId = 11, VersionNumber = "1.1.1", ReleaseNotes = Properties.Resources.HpWarrantyVersion1 }};
+            fileZap = new Product {ProductId = 3,Name = "File Zapper",
+                ImageUrl = @"http://houseofburt.files.wordpress.com/2012/05/filezapperscreenshot.png",
+                Description = Properties.Resources.FileZapperDescription, SourceLink = link6};
+            fileZap.Versions= new List<Models.Version>{new Models.Version{VersionId = 13, VersionNumber = "1.0.0", ReleaseNotes = "Intial Version"}};
+            context.Products.AddOrUpdate(serviceTag,hpWarranty,fileZap);
         }
 
         private void seedLinks(DataContext context)
@@ -50,12 +85,14 @@ namespace HouseOfBurt.Migrations
                 link3 = new Link { LinkId = 3, Caption = "Fresno Google Group", URL = "http://www.meetup.com/googledevelopers/" },
                 link4 = new Link { LinkId = 4, Caption = "Get Service Tag Reporter", URL = "http://db.tt/wmDB9FGf" },
                 link5 = new Link { LinkId = 5, Caption = "Get HP Warranty Reporter", URL = "http://db.tt/ERPKxCmw" },
-                link6 = new Link { LinkId = 6, Caption = "File Zapper Download", URL = "http://db.tt/1QnpzxsV" },
+                link6 = new Link { LinkId = 6, Caption = "Get File Zapper", URL = "http://db.tt/1QnpzxsV" },
                 link7 = new Link { LinkId = 7, Caption = "Monogame", URL = "http://monogame.net/" },
                 link8 = new Link { LinkId = 8, Caption = "XNA RPG", URL = "http://xnagpa.net/xna4rpg.php" },
                 link9 = new Link { LinkId = 9, Caption = "Monogame Codeplex", URL = "http://monogame.codeplex.com/" },
                 link10 = new Link { LinkId = 10, Caption = "Codecademy", URL = "http://www.codecademy.com/" },
                 link11 = new Link { LinkId = 11, Caption = "Geekwise Academy", URL = "http://geekwiseacademy.com/" }
+                //link12 = new Link{ LinkId = 12, Caption = "Download Service Tag Reporter", URL = ""},
+                //link13 = new Link() { LinkId}
                 );
         }
 

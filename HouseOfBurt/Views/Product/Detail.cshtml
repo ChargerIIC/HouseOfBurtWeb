@@ -1,0 +1,29 @@
+﻿@model HouseOfBurt.Models.Product
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid panel">
+    <h3>@ViewBag.Product.Name</h3>
+    <p></p>
+
+    @if (ViewBag.Product.ImageUrl != null)
+    {
+        <a href=@Url.Content(ViewBag.Product.ImageUrl)>
+            <img src=@Url.Content(ViewBag.Product.ImageUrl) width=150 />
+        </a>
+    }
+    <p>@Html.Raw(ViewBag.Product.Description)</p>
+    <a href=@ViewBag.Product.SourceLink.Url>@ViewBag.Product.SourceLink.Caption</a>
+    <br>
+    <div class="well">
+        <p>Version History:</p>
+        @foreach (var version in ViewBag.Product.Versions)
+        {
+            <h4>@version.VersionNumber</h4>
+            <p></p>
+            <p>@Html.Raw(version.ReleaseNotes)</p>
+        }
+    </div>
+</div>

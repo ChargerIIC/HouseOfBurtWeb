@@ -3,6 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@Styles.Render("~/Content/base/news")
 
 <div class="page-header"><h2>@ViewBag.Header</h2></div><br/>
 
@@ -10,7 +11,7 @@
 
     @foreach (Article newsArticle in ViewBag.NewsItems)
     {
-        <img src=@Url.Content(newsArticle.PictureUrl) width="50%"/>
+        <img src=@Url.Content(newsArticle.PictureUrl) class="center-block" width="50%" />
         <p></p>
         <h2>@newsArticle.Title</h2>
         <p></p>

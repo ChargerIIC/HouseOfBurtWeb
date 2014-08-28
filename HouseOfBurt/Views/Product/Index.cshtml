@@ -4,5 +4,23 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<div class="container-fluid">
+     @foreach (var product in ViewBag.Products)
+     {
+        <div class="panel">
+            <h3>@product.Name</h3>
+            <p></p>
 
+            @if (product.ImageUrl != null)
+            {
+            <a href=@Url.Content(product.ImageUrl)>
+                <img src=@Url.Content(product.ImageUrl) width=150 />
+            </a>
+            }
+            <p>@Html.Raw(product.Description)</p>
+
+            <br>
+            @Html.ActionLink("Read More", "Detail", new { @id = product.ProductId })
+        </div>
+     }
+</div>

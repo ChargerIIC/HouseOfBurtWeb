@@ -179,5 +179,163 @@ namespace HouseOfBurt.Properties {
                 return ResourceManager.GetString("Article9Content", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;File Zapper allows for the removal of unwanted files on multiple machines remotly. The application connects to each specified machine and uses the current user&amp;#8217;s creditials to effect removal of the desired file or folder.&lt;/p&gt;
+        ///    &lt;a href=http://houseofburt.files.wordpress.com/2012/05/filezapperscreenshot.png&gt;
+        ///        &lt;img src=http://houseofburt.files.wordpress.com/2012/05/filezapperscreenshot.png width=150 /&gt;
+        ///    &lt;/a&gt;
+        ///    &lt;p&gt;Enter the file path of the prospective file you wish to delete or brow [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string FileZapperDescription {
+            get {
+                return ResourceManager.GetString("FileZapperDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;HP Warranty Reporter pulls HP warranty information from HP&amp;#8217;s website for serial numbers you specify. It includes support for list entry and can pull information for either computers or printers.&lt;/p&gt;
+        ///    &lt;a href=http://houseofburt.files.wordpress.com/2012/05/screenshot.png&gt;
+        ///        &lt;img src=http://houseofburt.files.wordpress.com/2012/05/screenshot.png width=150 /&gt;
+        ///    &lt;/a&gt;
+        ///    &lt;p&gt;Enter in the desired serial numbers into the left hand input window and click &amp;#8216;Find Warranties&amp;#8217; to get a  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string HpWarrantyDescription {
+            get {
+                return ResourceManager.GetString("HpWarrantyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maintains compatibility with HP Warranty systems.
+        /// </summary>
+        public static string HpWarrantyVersion1 {
+            get {
+                return ResourceManager.GetString("HpWarrantyVersion1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Service Tag reporter allows you to fetch the warranty information for single or multiple Dell devices directly from the Dell Warranty service. It includes support for list entry and a &amp;#8216;scouting&amp;#8217; feature that allows you to pull the service tag from another device remotely.&lt;/p&gt;
+        ///    &lt;a href=http://houseofburt.files.wordpress.com/2013/09/servicetagreporter150.png&gt;
+        ///        &lt;img src=http://houseofburt.files.wordpress.com/2013/09/servicetagreporter150.png width=150 /&gt;
+        ///    &lt;/a&gt;
+        ///    &lt;p&gt;Enter in th [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string ServiceTagDescription {
+            get {
+                return ResourceManager.GetString("ServiceTagDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to * Changed output to ListView
+        ///* Adjusted some internal processing.
+        /// </summary>
+        public static string ServiceTagVersion1 {
+            get {
+                return ResourceManager.GetString("ServiceTagVersion1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to * Warranty fetch improvements
+        ///* Invalid service tags no longer return warranties
+        ///* Update to discard the new &apos;digital warranties&apos; being reported by Dell.
+        /// </summary>
+        public static string ServiceTagVersion10 {
+            get {
+                return ResourceManager.GetString("ServiceTagVersion10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to * Changed visual style to WPF
+        ///* Changed output to a DataGrid
+        ///* Added Find Serial Option.
+        /// </summary>
+        public static string ServiceTagVersion2 {
+            get {
+                return ResourceManager.GetString("ServiceTagVersion2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to * Fixed Resizing Issue
+        ///* Updated installer path.
+        /// </summary>
+        public static string ServiceTagVersion3 {
+            get {
+                return ResourceManager.GetString("ServiceTagVersion3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to * Added Progress Bar
+        ///* Added status Bar
+        ///* Input is not split by line carriages
+        ///* Fixed bug in spaces in serial numbers
+        ///* Known Bug: Status bar not updating in each loop
+        ///* Updated installer: now uses traditional instead of clickonce.
+        /// </summary>
+        public static string ServiceTagVersion4 {
+            get {
+                return ResourceManager.GetString("ServiceTagVersion4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to * Fixed GUI Elements
+        ///* Datagrid now fills dynamicly
+        ///* Fixed Installer shortcuts not showing proper icon.
+        /// </summary>
+        public static string ServiceTagVersion5 {
+            get {
+                return ResourceManager.GetString("ServiceTagVersion5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to * Updated code to fetch from Dell’s new SOAP service, resulting in faster reponses
+        ///* Fixed model column in results to display series and model number
+        ///* Various speed fixes
+        ///* Installer temporarily removed for updating..
+        /// </summary>
+        public static string ServiceTagVersion6 {
+            get {
+                return ResourceManager.GetString("ServiceTagVersion6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to * More Speed improvements
+        ///* Fixed bug in resolving invalid hostnames with ‘Find Tag’ button
+        ///* Fixed Gui issue – status now states when finished.
+        /// </summary>
+        public static string ServiceTagVersion7 {
+            get {
+                return ResourceManager.GetString("ServiceTagVersion7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to * Minor performance tweaks.
+        /// </summary>
+        public static string ServiceTagVersion8 {
+            get {
+                return ResourceManager.GetString("ServiceTagVersion8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to * Peformance upgrade
+        ///* UI redone to be more user-friendly
+        ///* Menu options added.
+        /// </summary>
+        public static string ServiceTagVersion9 {
+            get {
+                return ResourceManager.GetString("ServiceTagVersion9", resourceCulture);
+            }
+        }
     }
 }

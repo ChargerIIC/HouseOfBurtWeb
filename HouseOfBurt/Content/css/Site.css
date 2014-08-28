@@ -63,3 +63,11 @@ textarea {
 #search {
     margin-top: 10px;
 }
+
+.well {
+    background-color: white;
+}
+
+.panel {
+    background-color: #f5f5f5;
+}
