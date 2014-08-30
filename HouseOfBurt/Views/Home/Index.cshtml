@@ -45,10 +45,11 @@
 <div class="row">
     @foreach (Product product in ViewBag.Products)
     {
-        <div class="col-md-4">
+        <div class="col-md-3 childPanel panel panel-primary">
             <h2>@product.Name</h2>
-            @Html.Raw(product.Description);
-            <p><a class="btn btn-default" href="#">Learn More &raquo;</a></p>
+            <img src="@Url.Content(product.ImageUrl)" class="img-thumbnail"/>
+            <p>@product.ShortDescription</p>
+            <p>@Html.ActionLink(@"Learn More", "Detail", "Product", new { @id = product.ProductId }, new { @class = "btn btn-default" })</p>
         </div>
     }
 

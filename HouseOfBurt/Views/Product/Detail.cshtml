@@ -4,6 +4,11 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@section SideBarContent {
+        <a href="@ViewBag.Product.SourceLink.URL" class="list-group-item">@ViewBag.Product.SourceLink.Caption</a>
+}
+
 <div class="container-fluid panel">
     <h3>@ViewBag.Product.Name</h3>
     <p></p>
@@ -11,12 +16,13 @@
     @if (ViewBag.Product.ImageUrl != null)
     {
         <a href=@Url.Content(ViewBag.Product.ImageUrl)>
-            <img src=@Url.Content(ViewBag.Product.ImageUrl) width=150 />
+            <img src=@Url.Content(ViewBag.Product.ImageUrl) class="img-responsive" />
         </a>
     }
     <p>@Html.Raw(ViewBag.Product.Description)</p>
-    <a href=@ViewBag.Product.SourceLink.Url>@ViewBag.Product.SourceLink.Caption</a>
-    <br>
+    <a href=@ViewBag.Product.SourceLink.URL class="btn btn-lg btn-primary">@ViewBag.Product.SourceLink.Caption</a>
+    <br/>
+    <br/>
     <div class="well">
         <p>Version History:</p>
         @foreach (var version in ViewBag.Product.Versions)

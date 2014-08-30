@@ -182,10 +182,8 @@ namespace HouseOfBurt.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;File Zapper allows for the removal of unwanted files on multiple machines remotly. The application connects to each specified machine and uses the current user&amp;#8217;s creditials to effect removal of the desired file or folder.&lt;/p&gt;
-        ///    &lt;a href=http://houseofburt.files.wordpress.com/2012/05/filezapperscreenshot.png&gt;
-        ///        &lt;img src=http://houseofburt.files.wordpress.com/2012/05/filezapperscreenshot.png width=150 /&gt;
-        ///    &lt;/a&gt;
-        ///    &lt;p&gt;Enter the file path of the prospective file you wish to delete or brow [rest of string was truncated]&quot;;.
+        ///
+        ///    &lt;p&gt;Enter the file path of the prospective file you wish to delete or browse the desired path on your own workstation. Enter the names of the computers you wish to remove the files on and click &amp;#8216;Zap Files&amp;#8217; to remove the desired files form the workstations. Th [rest of string was truncated]&quot;;.
         /// </summary>
         public static string FileZapperDescription {
             get {
@@ -194,15 +192,31 @@ namespace HouseOfBurt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File Zapper is a network administration utility that allows you to remove files from a batch of specified computers at once. Great for cleaning up installation files and artifacts after a remote deployment..
+        /// </summary>
+        public static string FileZapperShortDescription {
+            get {
+                return ResourceManager.GetString("FileZapperShortDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;HP Warranty Reporter pulls HP warranty information from HP&amp;#8217;s website for serial numbers you specify. It includes support for list entry and can pull information for either computers or printers.&lt;/p&gt;
-        ///    &lt;a href=http://houseofburt.files.wordpress.com/2012/05/screenshot.png&gt;
-        ///        &lt;img src=http://houseofburt.files.wordpress.com/2012/05/screenshot.png width=150 /&gt;
-        ///    &lt;/a&gt;
-        ///    &lt;p&gt;Enter in the desired serial numbers into the left hand input window and click &amp;#8216;Find Warranties&amp;#8217; to get a  [rest of string was truncated]&quot;;.
+        ///
+        ///    &lt;p&gt;Enter in the desired serial numbers into the left hand input window and click &amp;#8216;Find Warranties&amp;#8217; to get a list of products and their associated warranties. If the product is found in the HP database it will update on the ship date, warranty expiration date and the official model nam [rest of string was truncated]&quot;;.
         /// </summary>
         public static string HpWarrantyDescription {
             get {
                 return ResourceManager.GetString("HpWarrantyDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HP Warranty Reporter can take a serial number you provide and query HP&apos;s public warranty database for the warranty details. Includes PCs and Printer warranties.
+        /// </summary>
+        public static string HpWarrantyShortDescription {
+            get {
+                return ResourceManager.GetString("HpWarrantyShortDescription", resourceCulture);
             }
         }
         
@@ -217,14 +231,21 @@ namespace HouseOfBurt.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;Service Tag reporter allows you to fetch the warranty information for single or multiple Dell devices directly from the Dell Warranty service. It includes support for list entry and a &amp;#8216;scouting&amp;#8217; feature that allows you to pull the service tag from another device remotely.&lt;/p&gt;
-        ///    &lt;a href=http://houseofburt.files.wordpress.com/2013/09/servicetagreporter150.png&gt;
-        ///        &lt;img src=http://houseofburt.files.wordpress.com/2013/09/servicetagreporter150.png width=150 /&gt;
-        ///    &lt;/a&gt;
-        ///    &lt;p&gt;Enter in th [rest of string was truncated]&quot;;.
+        ///
+        ///    &lt;p&gt;Enter in the desired service tags into the left hand input window and click &amp;#8216;Query Tags&amp;#8217; to get a list of products and their associated warranties. If you need to find out the service tag of a remot [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ServiceTagDescription {
             get {
                 return ResourceManager.GetString("ServiceTagDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service Tag Reporter is a great utility for finding, displaying and fetching Dell Warranty Information. Enter the Service Tag of a target PC (or fetch it from the network)and Service Tag Reporter will retreive the desired warranty information from Dell&apos;s Asset Service..
+        /// </summary>
+        public static string ServiceTagShortDescription {
+            get {
+                return ResourceManager.GetString("ServiceTagShortDescription", resourceCulture);
             }
         }
         

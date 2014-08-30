@@ -5,17 +5,30 @@
 }
 @Styles.Render("~/Content/base/news")
 
+@section SideBarContent {
+@foreach (Article newsArticle in ViewBag.NewsItems)
+{
+    foreach (Link link in newsArticle.Links)
+    {
+        <a href="@link.URL" class="list-group-item">@link.Caption</a>
+    }
+}
+}
+
 <div class="page-header"><h2>@ViewBag.Header</h2></div><br/>
 
 <div class="container">
 
     @foreach (Article newsArticle in ViewBag.NewsItems)
     {
-        <img src=@Url.Content(newsArticle.PictureUrl) class="center-block" width="50%" />
-        <p></p>
-        <h2>@newsArticle.Title</h2>
-        <p></p>
-        <p>@Html.Raw(newsArticle.Content)</p>
+        <div class="panel">
+            <br/>
+            <img src=@Url.Content(newsArticle.PictureUrl) class="center-block" width="50%" />
+            <p></p>
+            <h2>@newsArticle.Title</h2>
+            <p></p>
+            <p>@Html.Raw(newsArticle.Content)</p>
+        </div>
     }
 </div>
 

@@ -12,16 +12,19 @@ namespace HouseOfBurt.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            ViewBag.Products = DataService.Instance.Database.Products;
+            var products = DataService.Instance.Database.Products;
+            ViewBag.Products = products;
+            ViewBag.Links = products.Select(x => x.SourceLink);
             return View();
         }
 
         public ActionResult Detail(int id = 1)
         {
-
             Product product = DataService.Instance.Database.Products.FirstOrDefault(x => x.ProductId == id);
+            if (product == null) RedirectToAction("Index");
 
             ViewBag.Product = product;
+            ViewBag.Links = product.SourceLink;
             return View();
         }
 
