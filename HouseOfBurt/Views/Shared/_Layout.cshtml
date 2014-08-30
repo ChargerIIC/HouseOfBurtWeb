@@ -58,16 +58,17 @@
         
         <div class="container-fluid">
             <div class="row-fluid">
-                <div id="sidebar" class="col-lg-3 col-md-2">
-                    @if (IsSectionDefined("SideBarContent"))
-                    {
+                @if (IsSectionDefined("SideBarContent"))
+                {
+                    <div id="sidebar" class="col-lg-3 col-md-2">
+                    
                         <div class="list-group">
                             <a href="#" class="list-group-item active">Important Links</a>
                             @RenderSection("SideBarContent", required: false)
                         </div>
-                    }
-                </div>
-                <div id="content" class="col-lg-9 col-md-10">
+                    </div>
+                }
+                <div id="content" class=@(IsSectionDefined("SideBarContent") ? "col-lg-9 col-md-10" : "span12")>
                     @RenderBody()
                     <footer>
                         <p>&copy; @DateTime.Now.Year - House Of Burt Software</p>
@@ -77,31 +78,6 @@
                 <a id="toggleSidebar" href="#" class="span1 toggles"><span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
-
-        @*<div>
-            <aside class="page-sidebar span3 leftaside">
-                <h5 style="color: white">Important Links</h5>
-                <div class="Links">
-                    <ul>
-
-                        @if (ViewBag.SideLinks != null)
-                        {
-                        foreach (DataContext.Link link in ViewBag.SideLinks)
-                        {
-                            @Html.ActionLink(link.Title, link.Url);
-                        }
-            }
-                </ul>
-            </div>
-        </aside>
-    </div>*@
-
-        @*<div class="container body-content">
-
-            @RenderBody()
-        
-            <hr />
-        </div>*@
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
