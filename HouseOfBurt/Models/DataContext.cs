@@ -16,11 +16,11 @@ namespace HouseOfBurt.Models
         public DbSet<Product> Products { get; set; }
         public DbSet<Version> Versions { get; set; }
 
-        #region
+        #region Applications
 
         public DbSet<ContextIsNeeded_Question> ContextIsNeededQuestions { get; set; }
 
-        #endregion
+        #endregion Applications
 
         #endregion Tables
 

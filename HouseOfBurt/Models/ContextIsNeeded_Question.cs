@@ -6,15 +6,6 @@ using System.Web;
 
 namespace HouseOfBurt.Models
 {
-
-    public enum ContextIsNeededSite
-    {
-        StackOverflow,
-        Gaming,
-        Rpg,
-        SuperUser,
-    }
-
     public class ContextIsNeeded_Question
     {
         [Key]
@@ -23,7 +14,5 @@ namespace HouseOfBurt.Models
         public string Caption { get; set; }
 
         public string Url { get; set; }
-
-        public ContextIsNeededSite OriginSite { get; set; }
     }
 }

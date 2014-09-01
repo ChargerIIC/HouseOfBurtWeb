@@ -144,120 +144,137 @@ namespace HouseOfBurt.Migrations
             context.ContextIsNeededQuestions.AddOrUpdate(
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 41,
                     Caption = "How do I make it absolutely clear that I'm shooting you in the face?",
                     Url =
                         "http://rpg.stackexchange.com/questions/46889/how-do-i-make-it-absolutely-clear-that-im-shooting-you-in-the-face"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 40,
                     Caption = "How can I get my wife to stop nagging about a few murders?",
                     Url =
                         "http://gaming.stackexchange.com/questions/39411/how-can-i-get-my-wife-to-stop-nagging-about-a-few-murders"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 39,
                     Caption = "Can I pass out from excessive drinking? ",
                     Url = "http://gaming.stackexchange.com/questions/9768/can-i-pass-out-from-excessive-drinking"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 38,
                     Caption = "How can I tell if a corpse is safe to eat? ",
                     Url = "http://gaming.stackexchange.com/questions/4999/how-can-i-tell-if-a-corpse-is-safe-to-eat"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 37,
                     Caption = "How can I keep monsters out of my nether regions?",
                     Url =
                         "http://gaming.stackexchange.com/questions/14605/how-can-i-keep-monsters-out-of-my-nether-regions"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 36,
                     Caption = "My children are useless. What should I do?",
                     Url = "http://gaming.stackexchange.com/questions/18376/my-children-are-useless-what-should-i-do"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 35,
                     Caption = "Al Gore won't leave me alone. How do I unfriend him on Facebook?",
                     Url =
                         "http://gaming.stackexchange.com/questions/158984/al-gore-wont-leave-me-alone-how-do-i-unfriend-someone-on-facebook"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 34,
                     Caption = "How do I cook meth? ",
                     Url = "http://gaming.stackexchange.com/q/130335/52800"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 33,
                     Caption = "How do I lick a plane?",
                     Url = "http://gaming.stackexchange.com/questions/162789/how-do-i-lick-a-plane"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 32,
                     Caption = "How can I increase my chances of getting cancer?",
                     Url =
                         "http://gaming.stackexchange.com/questions/169544/how-can-i-increase-my-chances-of-getting-cancer"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 31,
                     Caption = "One of my cooks died, how do I get rid of the corpse?",
                     Url =
                         "http://gaming.stackexchange.com/questions/167223/one-of-my-cooks-died-how-do-i-get-rid-of-the-corpse"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 30,
                     Caption = "What is the fastest way to kill my family?",
                     Url = "http://gaming.stackexchange.com/questions/139127/what-is-the-fastest-way-to-kill-my-family"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 29,
                     Caption = "Will sleeping with my sons wife have a negative effect on our relationship?",
                     Url =
                         "http://gaming.stackexchange.com/questions/174371/will-sleeping-with-my-sons-wife-have-a-negative-effect-on-our-relationship"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 28,
                     Caption = "How can I find lesbians?",
                     Url = "http://gaming.stackexchange.com/questions/34804/how-can-i-find-lesbians"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 27,
                     Caption = "How do I take off my pants?",
                     Url = "http://gaming.stackexchange.com/questions/120663/how-do-i-take-off-my-pants"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 26,
                     Caption = "Can I kill everybody?",
                     Url = "http://gaming.stackexchange.com/questions/13892/can-i-kill-everybody"
                 },
                 new ContextIsNeeded_Question
                 {
+                    QuestionId = 25,
                     Caption = "What is the point of having friends?",
                     Url = "http://gaming.stackexchange.com/questions/182194/what-is-the-point-of-having-friends"
                 },
-                new ContextIsNeeded_Question { Caption = "What is the terminal velocity of a sheep?", Url = "http://gaming.stackexchange.com/questions/178726/what-is-the-terminal-velocity-of-a-sheep" },
-                new ContextIsNeeded_Question { Caption = "What are the consequences of accepting unknown substances from strange men?", Url = "http://gaming.stackexchange.com/questions/23361/what-are-the-consequences-of-accepting-unknown-substances-from-strange-men" },
-                new ContextIsNeeded_Question { Caption = "Why did my dog just eat my cat?", Url = "http://gaming.stackexchange.com/q/17067/8366" },
-                new ContextIsNeeded_Question { Caption = "Does hitting a sheep in the face yield more wool? ", Url = "http://gaming.stackexchange.com/questions/24696/does-hitting-a-sheep-in-the-face-yield-more-wool" },
-                new ContextIsNeeded_Question { Caption = "How do I Know if I'm Dead? ", Url = "http://gaming.stackexchange.com/questions/11455/how-do-i-know-if-im-dead" },
-                new ContextIsNeeded_Question { Caption = "When is it a good idea to punch people?", Url = "http://gaming.stackexchange.com/questions/152166/when-is-it-a-good-idea-to-punch-people" },
-                new ContextIsNeeded_Question { Caption = "Can Vegans eat Jewelry?", Url = "http://gaming.stackexchange.com/questions/164898/can-vegans-eat-jewelry" },
-                new ContextIsNeeded_Question { Caption = "Why did this explosion make me fat?", Url = "http://gaming.stackexchange.com/questions/165084/why-did-this-explosion-make-me-fat-a-land-mine-increased-my-weight" },
-                new ContextIsNeeded_Question { Caption = "Is it a good idea to put on yellow dragon scale mail and go to town with a rubber chicken?", Url = "http://gaming.stackexchange.com/questions/142966/is-it-a-good-idea-to-put-on-yellow-dragon-scale-mail-and-go-to-town-with-a-rubbe" },
-                new ContextIsNeeded_Question { Caption = "Can I eat humans and sacrifice them to my god?", Url = "http://gaming.stackexchange.com/questions/86004/can-i-eat-humans-and-sacrifice-them-to-my-god" },
-                new ContextIsNeeded_Question { Caption = "What race should I genocide?", Url = "http://gaming.stackexchange.com/questions/17030/what-race-should-i-genocide" },
-                new ContextIsNeeded_Question { Caption = "Why does Windows think that my wireless keyboard is a toaster?", Url = "http://superuser.com/questions/792607/why-does-windows-think-that-my-wireless-keyboard-is-a-toaster" },
-                new ContextIsNeeded_Question { Caption = "My head keeps falling off. What can I do?", Url = "http://gaming.stackexchange.com/questions/37805/my-head-keeps-falling-off-what-can-i-do" },
-                new ContextIsNeeded_Question { Caption = "Why do I stop eating corpses? Should I keep eating them anyway?", Url = "http://gaming.stackexchange.com/questions/159747/why-do-i-stop-eating-corpses-should-i-keep-eating-them-anyway" },
-                new ContextIsNeeded_Question { Caption = "Why does Ghandi want to nuke me?", Url = "http://gaming.stackexchange.com/questions/58009/why-does-ghandi-want-to-nuke-me" },
-                new ContextIsNeeded_Question { Caption = "Why does my wedding turn into a brawl?", Url = "http://gaming.stackexchange.com/questions/118490/why-does-my-wedding-turn-into-a-brawl" },
-                new ContextIsNeeded_Question { Caption = "How to create and run a realistic cult?", Url = "http://rpg.stackexchange.com/questions/44574/how-to-create-and-run-a-realistic-cult" },
-                new ContextIsNeeded_Question { Caption = "I'm looking to stab someone. What weapon should I pick?", Url = "http://gaming.stackexchange.com/questions/109349/im-looking-to-stab-someone-what-weapon-should-i-pick" },
-                new ContextIsNeeded_Question { Caption = "Why does HTML think “chucknorris” is a color?", Url = "http://stackoverflow.com/questions/8318911/why-does-html-think-chucknorris-is-a-color" },
-                new ContextIsNeeded_Question { Caption = "Why are my balls disappearing?", Url = "http://stackoverflow.com/questions/11066050/why-are-my-balls-disappearing" },
-                new ContextIsNeeded_Question { Caption = "Why are my privates accessible?", Url = "http://stackoverflow.com/questions/5244997/why-are-my-privates-accessible" },
-                new ContextIsNeeded_Question { Caption = "Why are my listeners trigger happy", Url = "http://stackoverflow.com/questions/11309139/why-are-my-listeners-trigger-happy" },
-                new ContextIsNeeded_Question { Caption = "How can I kill a librarian without attracting more of them?", Url = "http://gaming.stackexchange.com/questions/182481/how-can-i-kill-a-librarian-without-attracting-more-of-them" },
-                new ContextIsNeeded_Question { Caption = "Why should I take showers?", Url = "http://gaming.stackexchange.com/questions/159672/why-should-i-take-showers" }
+                new ContextIsNeeded_Question { QuestionId= 1,Caption = "What is the terminal velocity of a sheep?", Url = "http://gaming.stackexchange.com/questions/178726/what-is-the-terminal-velocity-of-a-sheep" },
+                new ContextIsNeeded_Question { QuestionId= 2,Caption = "What are the consequences of accepting unknown substances from strange men?", Url = "http://gaming.stackexchange.com/questions/23361/what-are-the-consequences-of-accepting-unknown-substances-from-strange-men" },
+                new ContextIsNeeded_Question { QuestionId= 3,Caption = "Why did my dog just eat my cat?", Url = "http://gaming.stackexchange.com/q/17067/8366" },
+                new ContextIsNeeded_Question { QuestionId= 4,Caption = "Does hitting a sheep in the face yield more wool? ", Url = "http://gaming.stackexchange.com/questions/24696/does-hitting-a-sheep-in-the-face-yield-more-wool" },
+                new ContextIsNeeded_Question { QuestionId= 5,Caption = "How do I Know if I'm Dead? ", Url = "http://gaming.stackexchange.com/questions/11455/how-do-i-know-if-im-dead" },
+                new ContextIsNeeded_Question { QuestionId= 6,Caption = "When is it a good idea to punch people?", Url = "http://gaming.stackexchange.com/questions/152166/when-is-it-a-good-idea-to-punch-people" },
+                new ContextIsNeeded_Question { QuestionId= 7,Caption = "Can Vegans eat Jewelry?", Url = "http://gaming.stackexchange.com/questions/164898/can-vegans-eat-jewelry" },
+                new ContextIsNeeded_Question { QuestionId= 8,Caption = "Why did this explosion make me fat?", Url = "http://gaming.stackexchange.com/questions/165084/why-did-this-explosion-make-me-fat-a-land-mine-increased-my-weight" },
+                new ContextIsNeeded_Question { QuestionId= 9,Caption = "Is it a good idea to put on yellow dragon scale mail and go to town with a rubber chicken?", Url = "http://gaming.stackexchange.com/questions/142966/is-it-a-good-idea-to-put-on-yellow-dragon-scale-mail-and-go-to-town-with-a-rubbe" },
+                new ContextIsNeeded_Question { QuestionId= 10,Caption = "Can I eat humans and sacrifice them to my god?", Url = "http://gaming.stackexchange.com/questions/86004/can-i-eat-humans-and-sacrifice-them-to-my-god" },
+                new ContextIsNeeded_Question { QuestionId= 11,Caption = "What race should I genocide?", Url = "http://gaming.stackexchange.com/questions/17030/what-race-should-i-genocide" },
+                new ContextIsNeeded_Question { QuestionId= 12,Caption = "Why does Windows think that my wireless keyboard is a toaster?", Url = "http://superuser.com/questions/792607/why-does-windows-think-that-my-wireless-keyboard-is-a-toaster" },
+                new ContextIsNeeded_Question { QuestionId= 13,Caption = "My head keeps falling off. What can I do?", Url = "http://gaming.stackexchange.com/questions/37805/my-head-keeps-falling-off-what-can-i-do" },
+                new ContextIsNeeded_Question { QuestionId= 14,Caption = "Why do I stop eating corpses? Should I keep eating them anyway?", Url = "http://gaming.stackexchange.com/questions/159747/why-do-i-stop-eating-corpses-should-i-keep-eating-them-anyway" },
+                new ContextIsNeeded_Question { QuestionId= 15,Caption = "Why does Ghandi want to nuke me?", Url = "http://gaming.stackexchange.com/questions/58009/why-does-ghandi-want-to-nuke-me" },
+                new ContextIsNeeded_Question { QuestionId= 16,Caption = "Why does my wedding turn into a brawl?", Url = "http://gaming.stackexchange.com/questions/118490/why-does-my-wedding-turn-into-a-brawl" },
+                new ContextIsNeeded_Question { QuestionId= 17,Caption = "How to create and run a realistic cult?", Url = "http://rpg.stackexchange.com/questions/44574/how-to-create-and-run-a-realistic-cult" },
+                new ContextIsNeeded_Question { QuestionId= 18,Caption = "I'm looking to stab someone. What weapon should I pick?", Url = "http://gaming.stackexchange.com/questions/109349/im-looking-to-stab-someone-what-weapon-should-i-pick" },
+                new ContextIsNeeded_Question { QuestionId= 19,Caption = "Why does HTML think “chucknorris” is a color?", Url = "http://stackoverflow.com/questions/8318911/why-does-html-think-chucknorris-is-a-color" },
+                new ContextIsNeeded_Question { QuestionId= 20,Caption = "Why are my balls disappearing?", Url = "http://stackoverflow.com/questions/11066050/why-are-my-balls-disappearing" },
+                new ContextIsNeeded_Question { QuestionId= 21,Caption = "Why are my privates accessible?", Url = "http://stackoverflow.com/questions/5244997/why-are-my-privates-accessible" },
+                new ContextIsNeeded_Question { QuestionId= 22,Caption = "Why are my listeners trigger happy", Url = "http://stackoverflow.com/questions/11309139/why-are-my-listeners-trigger-happy" },
+                new ContextIsNeeded_Question { QuestionId= 23,Caption = "How can I kill a librarian without attracting more of them?", Url = "http://gaming.stackexchange.com/questions/182481/how-can-i-kill-a-librarian-without-attracting-more-of-them" },
+                new ContextIsNeeded_Question { QuestionId= 24,Caption = "Why should I take showers?", Url = "http://gaming.stackexchange.com/questions/159672/why-should-i-take-showers" }
                 );
         }
 
