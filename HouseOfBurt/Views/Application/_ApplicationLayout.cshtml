@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/base/css")
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top" role="navigation">
+        <div>
+            <button type="button" class="navbar-btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Menu
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                @RenderSection("MenuItems", required:false)
+                <li role="presentation" class="divider"></li>
+                <li role="presentation">
+                    @Html.ActionLink("House Of Burt", "Index", "Home", null,new { @role = "menuitem" })
+            </li>
+            </ul>
+        </div>
+     </nav>
+
+    @RenderBody()
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -45,6 +45,13 @@
                                 <li>@Html.ActionLink("All Products", "Index", "Product")</li>
                             </ul>
                         </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>@Html.ActionLink("Context Is Needed", "ContextIsNeeded", "Application")</li>
+                                <li>@Html.ActionLink("All Applications", "Index", "Application", null, new { @role = "menuitem" })</li>
+                            </ul>
+                        </li>
                         <li>@Html.ActionLink("Resume", "Resume", "Home")</li>
                     </ul>
                 </div>
