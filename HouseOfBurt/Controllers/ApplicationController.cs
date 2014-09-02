@@ -21,7 +21,7 @@ namespace HouseOfBurt.Controllers
 
             var images = new List<Tuple<string, int, int>>
             {
-                new Tuple<string, int, int>("../Content/img/BuisnessSuitWonder.png",0,60),
+                new Tuple<string, int, int>("../Content/img/BuisnessSuitWonder.png",20,65),
                 new Tuple<string, int, int>("../Content/img/ComputerAsk.png", 20,65),
                 new Tuple<string, int, int>("../Content/img/LaptopWonder.png", 20,70),
                 new Tuple<string, int, int>("../Content/img/KidWonder.png", 20,65),

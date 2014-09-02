@@ -158,6 +158,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\img\BuisnessSuitWonder.png" />
     <Content Include="Content\img\ComputerAsk.png" />
+    <Content Include="Content\img\ContextIsNeeded.png" />
     <Content Include="Content\img\FileZapper.png" />
     <Content Include="Content\img\GeekWiseLogo.jpg" />
     <Content Include="Content\img\HPWarrantyReporter.PNG" />
@@ -168,6 +169,7 @@
     <Content Include="Content\img\MonoGameLogo_512px.png" />
     <Content Include="Content\img\MonogameTier.png" />
     <Content Include="Content\img\MVC.png" />
+    <Content Include="Content\img\Refresh-icon.png" />
     <Content Include="Content\img\Search-icon.png" />
     <Content Include="Content\img\ServiceTagReporter150.png" />
     <Content Include="favicon.ico" />
