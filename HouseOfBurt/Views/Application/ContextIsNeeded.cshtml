@@ -87,10 +87,18 @@ top: 50%;
 </style>
 <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:700' rel='stylesheet' type='text/css'>
 
-<div class="bubble panel panel-default h4"><a href="@ViewBag.Question.Url">@ViewBag.Question.Caption</a></div>
+<div class="bubble panel panel-default h4"><a class="question" href="@ViewBag.Question.Url">@ViewBag.Question.Caption</a></div>
 
-<div class="panel panel-default bottom h1 title"><i><strong>Context Is Needed   <span class="glyphicon-refresh"></span></strong></i></div>
+<div class="panel panel-default bottom h1 title" onclick="refresh()"><i><strong>Context Is Needed   <span class="glyphicon-refresh"></span></strong></i></div>
 
 <script>
-    
+    function refresh() {
+        $.ajax({
+            url: "../Application/ContextNeededEndpoint"
+        }).then(function(data) {
+            $('html').css('background', 'url(' + data.url + ') no-repeat center center fixed');
+            $('.bubble').css('top', data.top + '%').css('left', data.left + '%');
+            $('.question').attr("href", data.link).text(data.caption);
+        });
+    }
 </script>
