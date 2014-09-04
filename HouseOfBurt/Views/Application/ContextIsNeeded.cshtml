@@ -5,8 +5,9 @@
 }
 
 @section MenuItems{
-<li role="presentation"><a role="menuitem" tabindex="-1" href="#">About ContextIsNeeded</a></li>
+<li role="presentation" onclick="refresh()"><a role="menuitem" tabindex="-1">Refresh</a></li>
 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Submit A Link</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="#">About ContextIsNeeded</a></li>
 }
 <style>
     html {
@@ -35,7 +36,7 @@
        position:fixed;
        top:@ViewBag.QuestionTop%;
        left:@ViewBag.QuestionLeft%;
-       width:40%;
+       width:35%;
         padding: 15px;
 background: #FFFFFF;
 -webkit-border-radius: 10px;
@@ -73,23 +74,9 @@ margin-top: -21px;
 left: -18px;
 top: 50%;
 }
-
-    .title {
-        background-color: rgba(255, 255, 255, 0.3);
-        color: #5200ff;
-        width: 9em;
-        right: 45%;
-        left: 45%;
-        bottom: 0px;
-        position: fixed;
-        font-family: 'Source Code Pro: 700';
-        }
 </style>
-<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:700' rel='stylesheet' type='text/css'>
 
 <div class="bubble panel panel-default h4"><a class="question" href="@ViewBag.Question.Url">@ViewBag.Question.Caption</a></div>
-
-<div class="panel panel-default bottom h1 title" onclick="refresh()"><i><strong>Context Is Needed   <span class="glyphicon glyphicon-refresh"></span></strong></i></div>
 
 <script>
     function refresh() {

@@ -10,27 +10,38 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/base/css")
+    @RenderSection("Css", required:false)
 </head>
-<body>
-    <nav class="navbar navbar-fixed-top" role="navigation">
+    <body>
         <div>
-            <button type="button" class="navbar-btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                Menu
-            </button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                @RenderSection("MenuItems", required:false)
-                <li role="presentation" class="divider"></li>
-                <li role="presentation">
-                    @Html.ActionLink("House Of Burt", "Index", "Home", null,new { @role = "menuitem" })
-            </li>
+        <div class="list-group col-sm-1 collapsedMenu">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active" onclick="expandMenu()"><a>Menu</a></li>
             </ul>
         </div>
-     </nav>
-
-    @RenderBody()
+        <div class="list-group col-sm-2 hidden expandedMenu">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active" onclick="collapseMenu()"><a>Menu</a></li>
+                <li>@Html.ActionLink("House Of Burt", "Index", "Home", null, new { @role = "menuitem" }) </li>
+                @RenderSection("MenuItems", required: false)
+            </ul>
+        </div>
+        </div>
+        @RenderBody()
     
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-</body>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        <script>
+            function expandMenu() {
+                $('.collapsedMenu').addClass('hidden');
+                $('.expandedMenu').removeClass('hidden');
+            }
+
+            function collapseMenu() {
+                $('.collapsedMenu').removeClass('hidden');
+                $('.expandedMenu').addClass('hidden');
+            }
+        </script>
+        @RenderSection("scripts", required: false)
+    </body>
 </html>
