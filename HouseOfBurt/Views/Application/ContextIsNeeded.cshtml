@@ -7,7 +7,7 @@
 @section MenuItems{
 <li role="presentation" onclick="refresh()"><a role="menuitem" tabindex="-1">Refresh</a></li>
 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Submit A Link</a></li>
-<li role="presentation"><a role="menuitem" tabindex="-1" href="#">About ContextIsNeeded</a></li>
+<li role="presentation" onclick="about()"><a role="menuitem" tabindex="-1">About ContextIsNeeded</a></li>
 }
 <style>
     html {
@@ -77,7 +77,13 @@ top: 50%;
 </style>
 
 <div class="bubble panel panel-default h4"><a class="question" href="@ViewBag.Question.Url">@ViewBag.Question.Caption</a></div>
-
+<div class ="about panel panel-primary col-lg-3 col-lg-offset-3 hidden">
+    <div class="panel-heading" onclick="about()">About Context Is Needed<span class="glyphicon glyphicon-remove pull-right"></span></div>
+    <div class="panel-body">
+        <p>Context Is Needed is a web application developed by Vernon Burt to present Stack Exchange network questions that are terribly out of context.</p>
+        <p>If you have any questions/ comments/ suggestions feel free to contact me at: <a href="mailto:houseofburtsoftware@yahoo.com">HouseOfBurtSoftware</a></p>
+    </div>
+</div>
 <script>
     function refresh() {
         $.ajax({
@@ -87,5 +93,14 @@ top: 50%;
             $('.bubble').css('top', data.top + '%').css('left', data.left + '%');
             $('.question').attr("href", data.link).text(data.caption);
         });
+    }
+
+    function about() {
+        if ($('.about').hasClass('hidden'))
+        {
+          $('.about').removeClass('hidden');
+        } else {
+          $('.about').addClass('hidden');
+        }
     }
 </script>
