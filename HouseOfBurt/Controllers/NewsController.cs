@@ -12,6 +12,7 @@ namespace HouseOfBurt.Controllers
     {
 
         // GET: News
+        [OutputCache(Duration = 300)]
         public ActionResult Index()
         {
             ViewBag.NewsItems = DataService.Instance.Database.Articles.Take(10);

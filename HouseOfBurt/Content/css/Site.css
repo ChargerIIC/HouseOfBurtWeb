@@ -77,7 +77,8 @@ textarea {
 }
 
 .childPanel {
-    margin: 10px;
+    width: 23%;
+    margin: 1%
 }
 
 #content {
@@ -110,4 +111,14 @@ textarea {
     top  :150px;
     color:#779DD7;
     padding:2px 4px;
+}
+
+.hOffset10{padding-left: 10px}
+
+.vOffset5 {
+    margin-top: 5px;
+}
+
+.vOffset15 {
+    margin-top: 15px;
 }

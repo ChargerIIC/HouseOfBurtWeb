@@ -11,7 +11,7 @@
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
-    <div class="carousel-inner">
+    <div class="carousel-inner container vOffset15">
         @{var firstArticle = true;}
         @foreach (Article newsItem in ViewBag.BigNewsItems)
         {
@@ -45,7 +45,7 @@
 <div class="row">
     @foreach (Product product in ViewBag.Products)
     {
-        <div class="col-md-3 childPanel panel panel-primary">
+        <div class="col-md-2 childPanel panel panel-primary">
             <h2>@product.Name</h2>
             <img src="@Url.Content(product.ImageUrl)" class="img-thumbnail"/>
             <p>@product.ShortDescription</p>

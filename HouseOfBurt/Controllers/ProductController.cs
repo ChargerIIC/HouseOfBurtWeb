@@ -10,6 +10,7 @@ namespace HouseOfBurt.Controllers
     public class ProductController : Controller
     {
         // GET: Product
+        [OutputCache(Duration = 86400)]
         public ActionResult Index()
         {
             var products = DataService.Instance.Database.Products;
@@ -28,6 +29,7 @@ namespace HouseOfBurt.Controllers
             return View();
         }
 
+        [OutputCache(Duration = 86400)]
         public ActionResult License()
         {
             return View();

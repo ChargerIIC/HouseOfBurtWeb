@@ -9,6 +9,7 @@ namespace HouseOfBurt.Controllers
 {
     public class HomeController : Controller
     {
+        [OutputCache(Duration = 86400)]
         public ActionResult Index()
         {
             //Grab top five news items
@@ -22,6 +23,7 @@ namespace HouseOfBurt.Controllers
             return View();
         }
 
+        [OutputCache(Duration = 86400)]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -29,6 +31,7 @@ namespace HouseOfBurt.Controllers
             return View();
         }
 
+        [OutputCache(Duration = 86400)]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -47,6 +50,7 @@ namespace HouseOfBurt.Controllers
             return View();
         }
 
+        [OutputCache(Duration = 86400)]
         public ActionResult Resume()
         {
             return View();
