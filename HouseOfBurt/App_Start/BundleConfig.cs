@@ -30,6 +30,9 @@ namespace HouseOfBurt
                       "~/Content/css/bootstrap.css",
                       "~/Content/css/site.css"));
 
+            bundles.Add(new StyleBundle("~/Content/base/contextneeded").Include(
+                      "~/Content/css/ContextNeeded.css"));
+
             bundles.Add(new StyleBundle("~/Content/base/news").Include(
                       "~/Content/css/News.css"));
             // Set EnableOptimizations to false for debugging. For more information,

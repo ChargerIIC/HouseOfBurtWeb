@@ -11,17 +11,6 @@ namespace HouseOfBurt.Tests.Controllers
 {
     public class StringUtilityTest
     {
-       
-
-        //[Fact]
-        //public void ToDelimitedStringTest()
-        //{
-        //    (new string[] { }).ToDelimitedString(",").Should().Be(string.Empty);
-        //    ((string[])null).ToDelimitedString(",").Should().Be(string.Empty);
-        //    (new string[] { "one" }).ToDelimitedString(", ").Should().Be("one");
-        //    (new string[] { "one", "two" }).ToDelimitedString(", ").Should().Be("one, two");
-        //    (new string[] { "one", "two" }).ToDelimitedString(",").Should().Be("one,two");
-        //}
 
         [Fact]
         public void StripHtmlTest()

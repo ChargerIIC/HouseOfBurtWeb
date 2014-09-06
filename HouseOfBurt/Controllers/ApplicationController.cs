@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 using HouseOfBurt.Models;
+using HouseOfBurt.Services;
 
 namespace HouseOfBurt.Controllers
 {
@@ -22,6 +25,12 @@ namespace HouseOfBurt.Controllers
                 new Tuple<string, int, int>("../Content/img/LadyWonder.png", 30,55)
             };
 
+        private EmailService emailService;
+        private EmailService EmailSvc
+        {
+            get { return emailService ?? (emailService = new EmailService()); }
+        }
+
         #endregion Class Level Variables
 
         // GET: Application
@@ -32,13 +41,23 @@ namespace HouseOfBurt.Controllers
 
         public ActionResult ContextIsNeeded()
         {
-            var random = new Random();
-            var image = images[random.Next(images.Count)];
-            ViewBag.Question = questions[random.Next(questions.Length)];
-            ViewBag.Image = image.Item1;
-            ViewBag.QuestionTop = image.Item2;
-            ViewBag.QuestionLeft = image.Item3;
             return View();
+        }
+
+        [HttpPost]
+        public JsonResult ContextSubmission(object[] link)
+        {
+            Uri url;
+            bool result = Uri.TryCreate(link[0].ToString(), UriKind.Absolute, out url) && url.Scheme == Uri.UriSchemeHttp;
+
+            if (result)
+            {
+                EmailSvc.SendSelfEmail("ContextIsNeeded Submission", url.ToString());
+
+                return new JsonResult() {Data = "sucess"};
+            }
+
+            return new JsonResult() { Data = "failure"};
         }
 
         public JsonResult ContextNeededEndpoint()
