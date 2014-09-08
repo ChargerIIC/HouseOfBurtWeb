@@ -202,6 +202,16 @@ Getting started in Monogame can be pretty daunting - there's a lot of new concep
 &lt;p&gt;About Service Tag Reporter:&lt;/p&gt;
 &lt;p&gt;Service Tag reporter is a software based utility that fetches warranty information from Dell&amp;#8217;s Warranty tracking servers.&lt;br /&gt;Enter in the desired service tags into the left hand input window and click &amp;#8216;Query Tags&amp;#8217; to get a list of products and their &lt;br /&gt;associated warranties. If you need to find out the service tag of a remote workstation in your network enter the machine name or IP address next to the &amp;#8216;Find Tag&amp;#8217; button. Click on the button and the service tag will be added to the input box.&lt;/p&gt;</value>
   </data>
+  <data name="DealORoundDescription" xml:space="preserve">
+    <value>&lt;p&gt;&lt;strong&gt;Deal O Round&lt;/strong&gt; is a single player card game featuring poker combinations on a 5x5 grid. Find poker combinations on the table and gain points! Larger points amounts are awarded for longer and more diffcult combinations.&lt;p&gt;
+&lt;p&gt;You have two minutes to create poker hands. The countdown timer is located on the top left side of the game.&lt;/p&gt;
+&lt;p&gt;Poker hands are created by pressing your finger on a card and dragging up, down, left or right. Diagonal selection is only allowed on the first level. As you drag the cards will dim indicating that they have been selected. Releasing your finger causes the game to evaluate the hand. Be sure to release while selecting your last card or the selection will not be made.&lt;/p&gt;
+&lt;p&gt;If no valid selection was made, the cards will remain. If a valid hand is made the cards are discarded and points are given. The remaining cards fall down to fill the empty positions.&lt;/p&gt;
+&lt;p&gt;Valid hands include all normal poker hands added with three and four card versions of a flush or straight.&lt;/p&gt;</value>
+  </data>
+  <data name="DealORoundShortDescription" xml:space="preserve">
+    <value>Deal O Round is a single player card game featuring poker combinations on a 5x5 grid. Find poker combinations on the table and gain points! Larger points amounts are awarded for longer and more diffcult combinations.</value>
+  </data>
   <data name="FileZapperDescription" xml:space="preserve">
     <value>&lt;p&gt;File Zapper allows for the removal of unwanted files on multiple machines remotly. The application connects to each specified machine and uses the current user&amp;#8217;s creditials to effect removal of the desired file or folder.&lt;/p&gt;
 

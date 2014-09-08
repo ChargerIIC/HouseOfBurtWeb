@@ -8,7 +8,7 @@ namespace HouseOfBurt.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<HouseOfBurt.Models.DataContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DataContext>
     {
         private Category personalCategory;
         private Category softwareCategory;
@@ -92,7 +92,15 @@ namespace HouseOfBurt.Migrations
                 SourceLink = link6
             };
             fileZap.Versions = new List<Models.Version> { new Models.Version { VersionId = 13, VersionNumber = "1.0.0", ReleaseNotes = "Intial Version" } };
-            context.Products.AddOrUpdate(serviceTag, hpWarranty, fileZap);
+            dealORound = new Product
+            {
+                ProductId = 4,
+                Name = "Deal O Round",
+                ImageUrl = "../Content/img/DealORound.jpg",
+                Description = Properties.Resources.DealORoundDescription,
+                ShortDescription = Properties.Resources.DealORoundShortDescription,
+            };
+            context.Products.AddOrUpdate(serviceTag, hpWarranty, fileZap, dealORound);
         }
 
         private void seedLinks(DataContext context)
@@ -274,7 +282,18 @@ namespace HouseOfBurt.Migrations
                 new ContextIsNeeded_Question { QuestionId= 21,Caption = "Why are my privates accessible?", Url = "http://stackoverflow.com/questions/5244997/why-are-my-privates-accessible" },
                 new ContextIsNeeded_Question { QuestionId= 22,Caption = "Why are my listeners trigger happy", Url = "http://stackoverflow.com/questions/11309139/why-are-my-listeners-trigger-happy" },
                 new ContextIsNeeded_Question { QuestionId= 23,Caption = "How can I kill a librarian without attracting more of them?", Url = "http://gaming.stackexchange.com/questions/182481/how-can-i-kill-a-librarian-without-attracting-more-of-them" },
-                new ContextIsNeeded_Question { QuestionId= 24,Caption = "Why should I take showers?", Url = "http://gaming.stackexchange.com/questions/159672/why-should-i-take-showers" }
+                new ContextIsNeeded_Question { QuestionId = 24, Caption = "The Internet keeps me from dreaming?", Url = "http://gaming.stackexchange.com/questions/123060/the-internet-keeps-me-from-dreaming" },
+                new ContextIsNeeded_Question { QuestionId = 42, Caption = "What items 'fit snugly in small areas'?", Url = "http://gaming.stackexchange.com/questions/121850/what-items-fit-snugly-in-small-areas" },
+                new ContextIsNeeded_Question { QuestionId = 43, Caption = "Is it common to die at work?", Url = "http://gaming.stackexchange.com/questions/41503/is-it-common-to-die-at-work" },
+                new ContextIsNeeded_Question { QuestionId = 44, Caption = "Can I detonate things without losing friends?", Url = "http://gaming.stackexchange.com/questions/17689/can-i-detonate-things-without-losing-friends" },
+                new ContextIsNeeded_Question { QuestionId = 45, Caption = "Can I change my gender?", Url = "http://gaming.stackexchange.com/questions/125054/can-i-change-my-gender" },
+                new ContextIsNeeded_Question { QuestionId = 46, Caption = "How can I make the animals wear pants?", Url = "http://gaming.stackexchange.com/questions/164862/how-can-i-make-the-animals-wear-pants" },
+                new ContextIsNeeded_Question { QuestionId = 47, Caption = "Why is there a fly in my pants?", Url = "http://english.stackexchange.com/questions/46669/why-is-there-a-fly-in-my-pants" },
+                new ContextIsNeeded_Question { QuestionId = 48, Caption = "How do I fatten someone up?", Url = "http://gaming.stackexchange.com/questions/177291/how-do-i-fatten-someone-up" },
+                new ContextIsNeeded_Question { QuestionId = 49, Caption = "Should [waffles] be burninated?", Url = "http://meta.stackexchange.com/questions/234451/should-waffles-be-burninated" },
+                new ContextIsNeeded_Question { QuestionId = 50, Caption = "Does there exist a singer's muzzle or silencer?", Url = "http://music.stackexchange.com/questions/23362/does-there-exist-a-singers-muzzle-or-silencer" },
+                new ContextIsNeeded_Question { QuestionId = 51, Caption = "Why should I take showers?", Url = "http://gaming.stackexchange.com/questions/159672/why-should-i-take-showers" }
+
                 );
         }
 

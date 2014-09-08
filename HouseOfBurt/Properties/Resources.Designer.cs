@@ -181,6 +181,26 @@ namespace HouseOfBurt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;&lt;strong&gt;Deal O Round&lt;/strong&gt; is a single player card game featuring poker combinations on a 5x5 grid. Find poker combinations on the table and gain points! Larger points amounts are awarded for longer and more diffcult combinations.&lt;p&gt;
+        ///&lt;p&gt;You have two minutes to create poker hands. The countdown timer is located on the top left side of the game.&lt;/p&gt;
+        ///&lt;p&gt;Poker hands are created by pressing your finger on a card and dragging up, down, left or right. Diagonal selection is only allowed on the first level.  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string DealORoundDescription {
+            get {
+                return ResourceManager.GetString("DealORoundDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deal O Round is a single player card game featuring poker combinations on a 5x5 grid. Find poker combinations on the table and gain points! Larger points amounts are awarded for longer and more diffcult combinations..
+        /// </summary>
+        public static string DealORoundShortDescription {
+            get {
+                return ResourceManager.GetString("DealORoundShortDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;File Zapper allows for the removal of unwanted files on multiple machines remotly. The application connects to each specified machine and uses the current user&amp;#8217;s creditials to effect removal of the desired file or folder.&lt;/p&gt;
         ///
         ///    &lt;p&gt;Enter the file path of the prospective file you wish to delete or browse the desired path on your own workstation. Enter the names of the computers you wish to remove the files on and click &amp;#8216;Zap Files&amp;#8217; to remove the desired files form the workstations. Th [rest of string was truncated]&quot;;.
