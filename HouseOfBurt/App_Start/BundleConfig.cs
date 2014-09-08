@@ -26,6 +26,9 @@ namespace HouseOfBurt
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/contextneededScripts").Include(
+                       "~/Scripts/jquery.backstretch.min.js"));
+
             bundles.Add(new StyleBundle("~/Content/base/css").Include(
                       "~/Content/css/bootstrap.css",
                       "~/Content/css/site.css"));

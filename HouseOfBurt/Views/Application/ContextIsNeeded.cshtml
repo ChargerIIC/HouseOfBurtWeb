@@ -16,16 +16,19 @@
 
 @section scripts
 {
+    @Scripts.Render("~/bundles/contextneededScripts")
+
+    <script>
     $(document).ready(refresh);
 
     function refresh() {
     $.ajax({
     url: "../Application/ContextNeededEndpoint"
     }).then(function(data) {
-    $('html').css('background', 'url(' + data.url + ') no-repeat center center fixed');
-    $('.bubble').css('top', data.top + '%').css('left', data.left + '%');
-    $('.question').attr("href", data.link).text(data.caption);
-    });
+        $.backstretch(data.url);
+        $('.bubble').css('top', data.top + '%').css('left', data.left + '%');
+        $('.question').attr("href", data.link).text(data.caption);
+      });
     }
 
     function about() {
@@ -69,6 +72,7 @@
     function popAlert(message) {
     $('#alert').html('<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>'+message+'</strong></div>')
     }
+    </script>
 }
 
 <div class="bubble h4"><a class="question" href="http://houseofburt.com">Uh Oh, I couldn't fetch any questions!</a></div>

@@ -18,11 +18,11 @@ namespace HouseOfBurt.Controllers
 
         List<Tuple<string, int, int>> images = new List<Tuple<string, int, int>>
             {
-                new Tuple<string, int, int>("../Content/img/BuisnessSuitWonder.png",20,65),
-                new Tuple<string, int, int>("../Content/img/ComputerAsk.png", 20,65),
-                new Tuple<string, int, int>("../Content/img/LaptopWonder.png", 20,70),
-                new Tuple<string, int, int>("../Content/img/KidWonder.png", 20,65),
-                new Tuple<string, int, int>("../Content/img/LadyWonder.png", 30,55)
+                new Tuple<string, int, int>("../Content/img/BuisnessSuitWonder.jpg",20,65),
+                new Tuple<string, int, int>("../Content/img/ComputerAsk.jpg", 20,65),
+                new Tuple<string, int, int>("../Content/img/LaptopWonder.jpg", 20,70),
+                new Tuple<string, int, int>("../Content/img/KidWonder.jpg", 20,65),
+                new Tuple<string, int, int>("../Content/img/LadyWonder.jpg", 30,55)
             };
 
         private EmailService emailService;
