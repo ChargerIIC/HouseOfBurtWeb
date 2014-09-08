@@ -8,7 +8,10 @@
 @section SideBarContent {
     @foreach (Product product in ViewBag.Products)
     {
-        <a href="@product.SourceLink.URL" class="list-group-item">@product.SourceLink.Caption</a>
+        if(product.SourceLink != null)
+         {
+             <a href="@product.SourceLink.URL" class="list-group-item">@product.SourceLink.Caption</a>
+         }
     }
 }
 

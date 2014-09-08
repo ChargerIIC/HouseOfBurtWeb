@@ -1,4 +1,5 @@
-﻿@model HouseOfBurt.Models.Product
+﻿@using System.Web.UI.WebControls
+@model HouseOfBurt.Models.Product
 
 @{
     ViewBag.Title = "Index";
@@ -6,7 +7,10 @@
 }
 
 @section SideBarContent {
+@if (@ViewBag.Product.SourceLink != null)
+    {
         <a href="@ViewBag.Product.SourceLink.URL" class="list-group-item">@ViewBag.Product.SourceLink.Caption</a>
+    }
 }
 
 <div class="container-fluid panel">
@@ -15,21 +19,27 @@
 
     @if (ViewBag.Product.ImageUrl != null)
     {
-        <a href=@Url.Content(ViewBag.Product.ImageUrl)>
-            <img src=@Url.Content(ViewBag.Product.ImageUrl) class="img-responsive" />
+        <a href=@Url.Content("../" + ViewBag.Product.ImageUrl)>
+            <img src=@Url.Content("../" + ViewBag.Product.ImageUrl) class="img-responsive" />
         </a>
     }
     <p>@Html.Raw(ViewBag.Product.Description)</p>
-    <a href=@ViewBag.Product.SourceLink.URL class="btn btn-lg btn-primary">@ViewBag.Product.SourceLink.Caption</a>
+    @if (@ViewBag.Product.SourceLink != null)
+    {
+        <a href=@ViewBag.Product.SourceLink.URL class="btn btn-lg btn-primary">@ViewBag.Product.SourceLink.Caption</a>
+    }
     <br/>
     <br/>
-    <div class="well">
-        <p>Version History:</p>
-        @foreach (var version in ViewBag.Product.Versions)
-        {
-            <h4>@version.VersionNumber</h4>
-            <p></p>
-            <p>@Html.Raw(version.ReleaseNotes)</p>
-        }
-    </div>
+    @if (ViewBag.Product.Versions.Count > 0)
+    {
+        <div class="well">
+            <p>Version History:</p>
+            @foreach (var version in ViewBag.Product.Versions)
+            {
+                <h4>@version.VersionNumber</h4>
+                <p></p>
+                <p>@Html.Raw(version.ReleaseNotes)</p>
+            }
+        </div>
+    }
 </div>

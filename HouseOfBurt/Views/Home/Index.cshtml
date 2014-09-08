@@ -49,7 +49,7 @@
             <h2>@product.Name</h2>
             <img src="@Url.Content(product.ImageUrl)" class="img-thumbnail"/>
             <p>@product.ShortDescription</p>
-            <p>@Html.ActionLink(@"Learn More", "Detail", "Product", new { @id = product.ProductId }, new { @class = "btn btn-default" })</p>
+            <p>@Html.ActionLink(@"Learn More", "Detail", "Product", new { @id = product.ProductId }, new { @class = "btn btn-primary" })</p>
         </div>
     }
 

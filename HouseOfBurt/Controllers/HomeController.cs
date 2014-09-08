@@ -18,7 +18,7 @@ namespace HouseOfBurt.Controllers
                 .Take(4);
 
             ViewBag.Products = DataService.Instance.Database.Products
-                .Take(3);
+                .Take(4);
 
             return View();
         }
