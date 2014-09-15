@@ -73,11 +73,25 @@ namespace HouseOfBurt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;p&gt;&lt;/p&gt;.
+        ///   Looks up a localized string similar to &lt;h3&gt;Migrating from Django to Asp.Net&lt;/h3&gt;&lt;br&gt;
+        ///
+        ///&lt;strong&gt;Welcome to the new site!&lt;/strong&gt;
+        ///&lt;p&gt;Welcome to the new version of &lt;a href=&quot;https:\\HouseofBurt.com&quot;&gt;House of Burt.com!&lt;/a&gt; You&apos;ll notice a few changes - like the new Applications menu for Web Applications and the new home page. This is still the primary location to download new tools like &lt;a href=&quot;../Product/Detail/1&quot;&gt;Service Tag Reporter&lt;/a&gt; and &lt;a href=&quot;../Product/Detail/3&gt;FileZapper&lt;/a&gt;. If you are new to &lt;a href=&quot;https:\\HouseofBurt.com&quot;&gt;HouseOf [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Article11Content {
             get {
                 return ResourceManager.GetString("Article11Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Today is the official launch of &lt;a href=&quot;http://www.contextisneeded.com&quot;&gt;ContextIsNeeded.com&lt;/a&gt;. This is the first web application developed under the House Of Burt name and available for the public. I created it as a very basic example of how a web application can work and to point out the hilarity of certain StackExchange questions were placed out of context.&lt;/p&gt; 
+        ///&lt;p&gt;&lt;strong&gt;How did the project come about?&lt;/strong&gt;&lt;/p&gt; 
+        ///&lt;p&gt;Like most developers, I am an avid fan of the &lt;a href=&quot;http://stackexchange.c [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Article12Content {
+            get {
+                return ResourceManager.GetString("Article12Content", resourceCulture);
             }
         }
         

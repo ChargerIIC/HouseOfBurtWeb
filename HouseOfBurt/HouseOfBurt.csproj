@@ -164,9 +164,11 @@
     <Content Include="Content\css\ContextNeeded.css" />
     <Content Include="Content\css\News.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\img\asp-net-logo.png" />
     <Content Include="Content\img\BuisnessSuitWonder.jpg" />
     <Content Include="Content\img\ComputerAsk.jpg" />
     <Content Include="Content\img\ContextIsNeeded.png" />
+    <Content Include="Content\img\Context_Is_Needed.jpg" />
     <Content Include="Content\img\DealORound.jpg" />
     <Content Include="Content\img\FileZapper.png" />
     <Content Include="Content\img\GeekWiseLogo.jpg" />
@@ -181,6 +183,7 @@
     <Content Include="Content\img\Refresh-icon.png" />
     <Content Include="Content\img\Search-icon.png" />
     <Content Include="Content\img\ServiceTagReporter150.png" />
+    <Content Include="Content\img\StackExchange_HotQuestions.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\css\Site.css" />

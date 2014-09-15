@@ -26,6 +26,12 @@ namespace HouseOfBurt.Migrations
         private Link link10;
         private Link link11;
         private Link link12;
+        private Link link13;
+        private Link link14;
+        private Link link15;
+        private Link link16;
+
+
 
         private Product serviceTag;
         private Product hpWarranty;
@@ -57,20 +63,70 @@ namespace HouseOfBurt.Migrations
                 ImageUrl = @"../Content/img/ServiceTagReporter150.png",
                 Description = Properties.Resources.ServiceTagDescription,
                 ShortDescription = Properties.Resources.ServiceTagShortDescription,
-                SourceLink = link4
-            };
-            serviceTag.Versions = new List<Models.Version>
-            {
-                new Models.Version { VersionId = 1, VersionNumber = "1.0.0.0", ReleaseNotes = Properties.Resources.ServiceTagVersion1 },
-                new Models.Version { VersionId = 2, VersionNumber = "1.1.0.0", ReleaseNotes = Properties.Resources.ServiceTagVersion2 },
-                new Models.Version { VersionId = 3, VersionNumber = "1.1.0.1", ReleaseNotes = Properties.Resources.ServiceTagVersion3 },
-                new Models.Version { VersionId = 4, VersionNumber = "1.1.2.0", ReleaseNotes = Properties.Resources.ServiceTagVersion4 },
-                new Models.Version { VersionId = 5, VersionNumber = "1.1.3.0", ReleaseNotes = Properties.Resources.ServiceTagVersion5 },
-                new Models.Version { VersionId = 6, VersionNumber = "1.4.0.0", ReleaseNotes = Properties.Resources.ServiceTagVersion6 },
-                new Models.Version { VersionId = 8, VersionNumber = "1.4.1.0", ReleaseNotes = Properties.Resources.ServiceTagVersion7 },
-                new Models.Version { VersionId = 9, VersionNumber = "1.4.1.1", ReleaseNotes = Properties.Resources.ServiceTagVersion8 },
-                new Models.Version { VersionId = 10, VersionNumber = "1.5.0.0", ReleaseNotes = Properties.Resources.ServiceTagVersion9 },
-                new Models.Version { VersionId = 12, VersionNumber = "1.6.0.0", ReleaseNotes = Properties.Resources.ServiceTagVersion10 }
+                SourceLink = link4,
+                Versions = new List<Models.Version>
+                {
+                    new Models.Version
+                    {
+                        VersionId = 1,
+                        VersionNumber = "1.0.0.0",
+                        ReleaseNotes = Properties.Resources.ServiceTagVersion1
+                    },
+                    new Models.Version
+                    {
+                        VersionId = 2,
+                        VersionNumber = "1.1.0.0",
+                        ReleaseNotes = Properties.Resources.ServiceTagVersion2
+                    },
+                    new Models.Version
+                    {
+                        VersionId = 3,
+                        VersionNumber = "1.1.0.1",
+                        ReleaseNotes = Properties.Resources.ServiceTagVersion3
+                    },
+                    new Models.Version
+                    {
+                        VersionId = 4,
+                        VersionNumber = "1.1.2.0",
+                        ReleaseNotes = Properties.Resources.ServiceTagVersion4
+                    },
+                    new Models.Version
+                    {
+                        VersionId = 5,
+                        VersionNumber = "1.1.3.0",
+                        ReleaseNotes = Properties.Resources.ServiceTagVersion5
+                    },
+                    new Models.Version
+                    {
+                        VersionId = 6,
+                        VersionNumber = "1.4.0.0",
+                        ReleaseNotes = Properties.Resources.ServiceTagVersion6
+                    },
+                    new Models.Version
+                    {
+                        VersionId = 8,
+                        VersionNumber = "1.4.1.0",
+                        ReleaseNotes = Properties.Resources.ServiceTagVersion7
+                    },
+                    new Models.Version
+                    {
+                        VersionId = 9,
+                        VersionNumber = "1.4.1.1",
+                        ReleaseNotes = Properties.Resources.ServiceTagVersion8
+                    },
+                    new Models.Version
+                    {
+                        VersionId = 10,
+                        VersionNumber = "1.5.0.0",
+                        ReleaseNotes = Properties.Resources.ServiceTagVersion9
+                    },
+                    new Models.Version
+                    {
+                        VersionId = 12,
+                        VersionNumber = "1.6.0.0",
+                        ReleaseNotes = Properties.Resources.ServiceTagVersion10
+                    }
+                }
             };
             hpWarranty = new Product
             {
@@ -79,9 +135,18 @@ namespace HouseOfBurt.Migrations
                 ImageUrl = @"http://houseofburt.files.wordpress.com/2012/05/screenshot.png",
                 Description = Properties.Resources.HpWarrantyDescription,
                 ShortDescription = Properties.Resources.HpWarrantyShortDescription,
-                SourceLink = link5
+                SourceLink = link5,
+                Versions =
+                    new List<Models.Version>
+                    {
+                        new Models.Version
+                        {
+                            VersionId = 11,
+                            VersionNumber = "1.1.1",
+                            ReleaseNotes = Properties.Resources.HpWarrantyVersion1
+                        }
+                    }
             };
-            hpWarranty.Versions = new List<Models.Version> { new Models.Version { VersionId = 11, VersionNumber = "1.1.1", ReleaseNotes = Properties.Resources.HpWarrantyVersion1 } };
             fileZap = new Product
             {
                 ProductId = 3,
@@ -89,9 +154,13 @@ namespace HouseOfBurt.Migrations
                 ImageUrl = @"http://houseofburt.files.wordpress.com/2012/05/filezapperscreenshot.png",
                 Description = Properties.Resources.FileZapperDescription,
                 ShortDescription = Properties.Resources.FileZapperShortDescription,
-                SourceLink = link6
+                SourceLink = link6,
+                Versions =
+                    new List<Models.Version>
+                    {
+                        new Models.Version {VersionId = 13, VersionNumber = "1.0.0", ReleaseNotes = "Intial Version"}
+                    }
             };
-            fileZap.Versions = new List<Models.Version> { new Models.Version { VersionId = 13, VersionNumber = "1.0.0", ReleaseNotes = "Intial Version" } };
             dealORound = new Product
             {
                 ProductId = 4,
@@ -117,8 +186,11 @@ namespace HouseOfBurt.Migrations
                 link9 = new Link { LinkId = 9, Caption = "Monogame Codeplex", URL = "http://monogame.codeplex.com/" },
                 link10 = new Link { LinkId = 10, Caption = "Codecademy", URL = "http://www.codecademy.com/" },
                 link11 = new Link { LinkId = 11, Caption = "Geekwise Academy", URL = "http://geekwiseacademy.com/" },
-                link12 = new Link { LinkId = 12, Caption = "Deal O Round", URL = "http://dealoround.com" }
-                //link13 = new Link() { LinkId}
+                link12 = new Link { LinkId = 12, Caption = "Deal O Round", URL = "http://dealoround.com" },
+                link13 = new Link { LinkId = 13, Caption = "Context Is Needed", URL="http://www.contextisneeded.com"},
+                link14 = new Link { LinkId = 14, Caption = "Stack Exchange", URL = "http://stackexchange.com" },
+                link15 = new Link { LinkId = 15, Caption = "Jquery Backstretch", URL="http://srobbin.com/jquery-plugins/backstretch/"},
+                link16 = new Link { LinkId = 16, Caption = "Design For Hackers", URL = "http://designforhackers.com/" }
                 );
         }
 
@@ -142,8 +214,9 @@ namespace HouseOfBurt.Migrations
                 new Article { ArticleId = 7, Title = "Service Tag Reporter 1.5 Released", Content = Properties.Resources.Article7Content, CreationDate = DateTime.Parse("2013-09-22"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link4 }, PictureUrl = "../Content/img/ServiceTagReporter150.png" },
                 new Article { ArticleId = 8, Title = "Starting out in Monogame", Content = Properties.Resources.Article8Content, CreationDate = DateTime.Parse("2013-10-26"), Tags = new List<Category> { personalCategory }, Links = new List<Link> { link1, link3, link7, link8, link9 }, PictureUrl = "../Content/img/MonoGameLogo_512px.png" },
                 new Article { ArticleId = 9, Title = "Service Tag Reporter 1.6 Released", Content = Properties.Resources.Article9Content, CreationDate = DateTime.Parse("11/29/2013"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link4 }, PictureUrl = "../Content/img/ServiceTagReporter150.png" },
-                new Article { ArticleId = 10, Title = "Geekwise Academy", Content = Properties.Resources.Article10Content, CreationDate = DateTime.Parse("12/03/2013"), Tags = new List<Category> { personalCategory }, Links = new List<Link> { link10, link11 }, PictureUrl = "../Content/img/GeekWiseLogo.jpg" }
-                //new Article { ArticleId = 11, Title = "New Site: Now Asp.Net!", Content = ContentLocalization.Article11Content, CreationDate = DateTime.Parse("08/10/2014"),Tags = new List<Category> { webCategory }}
+                new Article { ArticleId = 10, Title = "Geekwise Academy", Content = Properties.Resources.Article10Content, CreationDate = DateTime.Parse("12/03/2013"), Tags = new List<Category> { personalCategory }, Links = new List<Link> { link10, link11 }, PictureUrl = "../Content/img/GeekWiseLogo.jpg" },
+                new Article { ArticleId = 11, Title = "Migrating from Django to Asp.Net", Content = Properties.Resources.Article11Content, CreationDate = DateTime.Parse("08/10/2014"),Tags = new List<Category> { webCategory }, PictureUrl = "../Content/img/asp-net-logo.png"},
+                new Article { ArticleId = 12, Title = "Context Is Needed Launch", Content = Properties.Resources.Article12Content, CreationDate = new DateTime(2014, 09, 14), Tags = new List<Category> { webCategory, softwareCategory }, Links = new List<Link> { link13, link14, link15, link16 }, PictureUrl = "../Content/img/Context_Is_Needed.jpg" }
                 );
         }
 
