@@ -15,7 +15,7 @@ namespace HouseOfBurt.Controllers
         [OutputCache(Duration = 300)]
         public ActionResult Index()
         {
-            ViewBag.NewsItems = DataService.Instance.Database.Articles.Take(10);
+            ViewBag.NewsItems = DataService.Instance.Database.Articles.OrderByDescending(x => x.CreationDate).Take(10);
             ViewBag.Header = "News Items";
             return View();
         }
@@ -30,6 +30,14 @@ namespace HouseOfBurt.Controllers
             if (!newsItems.Any()) newsItems = DataService.Instance.Database.Articles.ToList();
             ViewBag.NewsItems = newsItems;
             return View("Index");
+        }
+
+        public ActionResult Article(int articleId)
+        {
+            var newsArticle = DataService.Instance.Database.Articles.FirstOrDefault(x => x.ArticleId == articleId);
+            if (newsArticle == null) RedirectToAction("Index");
+            ViewBag.Article = newsArticle;
+            return View();
         }
     }
 }

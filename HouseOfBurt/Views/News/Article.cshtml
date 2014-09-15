@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Article";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/Content/base/news")
+
+@section SideBarContent {
+    @foreach (Link link in ViewBag.Article.Links)
+    {
+        <a href="@link.URL" class="list-group-item">@link.Caption</a>
+    }
+}
+
+<div class="panel">
+    <br />
+    <img src=@Url.Content(ViewBag.Article.PictureUrl) class="center-block" width="50%" />
+    <p></p>
+    <h2>@ViewBag.Article.Title</h2>
+    <p></p>
+    <p>@Html.Raw(ViewBag.Article.Content)</p>
+</div>
+
