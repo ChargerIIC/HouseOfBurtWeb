@@ -365,8 +365,14 @@ namespace HouseOfBurt.Migrations
                 new ContextIsNeeded_Question { QuestionId = 48, Caption = "How do I fatten someone up?", Url = "http://gaming.stackexchange.com/questions/177291/how-do-i-fatten-someone-up" },
                 new ContextIsNeeded_Question { QuestionId = 49, Caption = "Should [waffles] be burninated?", Url = "http://meta.stackexchange.com/questions/234451/should-waffles-be-burninated" },
                 new ContextIsNeeded_Question { QuestionId = 50, Caption = "Does there exist a singer's muzzle or silencer?", Url = "http://music.stackexchange.com/questions/23362/does-there-exist-a-singers-muzzle-or-silencer" },
-                new ContextIsNeeded_Question { QuestionId = 51, Caption = "Why should I take showers?", Url = "http://gaming.stackexchange.com/questions/159672/why-should-i-take-showers" }
-
+                new ContextIsNeeded_Question { QuestionId = 51, Caption = "Why should I take showers?", Url = "http://gaming.stackexchange.com/questions/159672/why-should-i-take-showers" },
+                new ContextIsNeeded_Question { QuestionId = 52, Caption = "'balls have dropped' what does it mean?", Url = "http://english.stackexchange.com/questions/195433/balls-have-dropped-what-does-it-mean" },
+                new ContextIsNeeded_Question { QuestionId = 53, Caption = "How do I implement a physics gun?", Url="http://gamedev.stackexchange.com/questions/47628/how-do-i-implement-a-physics-gun" },
+                new ContextIsNeeded_Question { QuestionId = 54, Caption = "How to handle walking into walls?", Url="http://gamedev.stackexchange.com/questions/23157/how-to-handle-walking-into-walls" },
+                new ContextIsNeeded_Question { QuestionId = 55, Caption = "How to avoid being throttled?", Url = "http://gamedev.stackexchange.com/questions/56533/how-to-avoid-being-throttled" },
+                new ContextIsNeeded_Question { QuestionId = 56, Caption = "How do I make time?", Url = "http://gamedev.stackexchange.com/questions/38295/how-do-i-make-time" },
+                new ContextIsNeeded_Question { QuestionId = 57, Caption = "How can I kill Mom?", Url = "http://gaming.stackexchange.com/questions/31438/how-can-i-kill-mom" },
+                new ContextIsNeeded_Question { QuestionId = 58, Caption = "Is there anyone left in the world, save me and my rifle?", Url = "http://gaming.stackexchange.com/questions/94983/is-there-anyone-left-in-the-world-save-me-and-my-rifle" }
                 );
         }
 

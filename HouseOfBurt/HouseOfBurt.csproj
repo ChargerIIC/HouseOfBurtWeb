@@ -132,6 +132,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -166,6 +167,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\img\asp-net-logo.png" />
     <Content Include="Content\img\BuisnessSuitWonder.jpg" />
+    <Content Include="Content\img\404.jpg" />
     <Content Include="Content\img\ComputerAsk.jpg" />
     <Content Include="Content\img\ContextIsNeeded.png" />
     <Content Include="Content\img\Context_Is_Needed.jpg" />
@@ -240,6 +242,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
