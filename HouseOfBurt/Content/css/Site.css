@@ -1,7 +1,12 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    /*background-color: rgb(27, 161, 226);*/
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif
 }
 
 /* Set padding to keep content from hitting the edges */
