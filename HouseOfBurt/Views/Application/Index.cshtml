@@ -1,8 +1,33 @@
-﻿
+﻿@using System.Net.Mime
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+@section css
+{
+}
 
+<div class="center-block"><h2>Web Applications</h2></div>
+
+<div class="container-fluid">
+    @foreach (var app in ViewBag.WebApplications)
+    {
+        <div class="panel col-lg-8 col-md-8">
+            <h3>@app.Name</h3>
+            <p></p>
+
+            @if (app.ImageUrl != null)
+            {
+                <a href=@Url.Content(app.ImageUrl)>
+                    <img src=@Url.Content(app.ImageUrl) width=150 />
+                </a>
+            }
+            <p>@Html.Raw(app.Description)</p>
+
+            <br>
+            @LinkExtensions.ActionLink(Html, "Go to the App", app.Action, null, new { @class = "btn btn-primary" })
+        </div>
+    }
+</div>

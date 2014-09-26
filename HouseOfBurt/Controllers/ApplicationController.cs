@@ -36,6 +36,7 @@ namespace HouseOfBurt.Controllers
         // GET: Application
         public ActionResult Index()
         {
+            ViewBag.WebApplications = DataService.Instance.Database.WebApplications.ToList();
             return View();
         }
 
