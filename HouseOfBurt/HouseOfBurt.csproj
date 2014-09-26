@@ -137,6 +137,7 @@
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Application.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ContextIsNeeded_Question.cs" />
     <Compile Include="Models\DataContext.cs" />

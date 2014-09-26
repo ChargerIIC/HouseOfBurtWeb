@@ -51,6 +51,7 @@ namespace HouseOfBurt.Migrations
             seedLinks(context);
             seedArticles(context);
             seedProducts(context);
+            seedApplications(context);
             seedApplicationData(context);
         }
 
@@ -170,6 +171,12 @@ namespace HouseOfBurt.Migrations
                 ShortDescription = Properties.Resources.DealORoundShortDescription,
             };
             context.Products.AddOrUpdate(serviceTag, hpWarranty, fileZap, dealORound);
+        }
+
+        private void seedApplications(DataContext context)
+        {
+            context.WebApplications.AddOrUpdate(
+                new Application{ ApplicationId = 1, Action="ContextIsNeeded", Name="Context is Needed", Description="ContextIsNeeded is a web application that points out some of the foibles in the famous StackExchange network. Curated questions are presented without context, leading the user to wonder just what are they asking over there. Questions are pulled from throughout the network, including StackOverflow, Gaming, and Workplace exchanges."});
         }
 
         private void seedLinks(DataContext context)
@@ -372,7 +379,17 @@ namespace HouseOfBurt.Migrations
                 new ContextIsNeeded_Question { QuestionId = 55, Caption = "How to avoid being throttled?", Url = "http://gamedev.stackexchange.com/questions/56533/how-to-avoid-being-throttled" },
                 new ContextIsNeeded_Question { QuestionId = 56, Caption = "How do I make time?", Url = "http://gamedev.stackexchange.com/questions/38295/how-do-i-make-time" },
                 new ContextIsNeeded_Question { QuestionId = 57, Caption = "How can I kill Mom?", Url = "http://gaming.stackexchange.com/questions/31438/how-can-i-kill-mom" },
-                new ContextIsNeeded_Question { QuestionId = 58, Caption = "Is there anyone left in the world, save me and my rifle?", Url = "http://gaming.stackexchange.com/questions/94983/is-there-anyone-left-in-the-world-save-me-and-my-rifle" }
+                new ContextIsNeeded_Question { QuestionId = 58, Caption = "Is there anyone left in the world, save me and my rifle?", Url = "http://gaming.stackexchange.com/questions/94983/is-there-anyone-left-in-the-world-save-me-and-my-rifle" },
+                new ContextIsNeeded_Question { QuestionId = 59, Caption = "Is it bad if all my kittens starve?", Url = "http://gaming.stackexchange.com/questions/184326/is-it-bad-if-all-my-kittens-starve" },
+                new ContextIsNeeded_Question { QuestionId = 60, Caption = "How can I prepare for getting hit by a bus?", Url = "http://workplace.stackexchange.com/questions/9128/how-can-i-prepare-for-getting-hit-by-a-bus" },
+                new ContextIsNeeded_Question { QuestionId = 61, Caption = "How does happiness work?", Url = "http://gaming.stackexchange.com/questions/184385/how-does-happiness-work" },
+                new ContextIsNeeded_Question { QuestionId = 62, Caption = "Whose underwear is this?", Url = "http://scifi.stackexchange.com/questions/68005/whose-underwear-is-this" },
+                new ContextIsNeeded_Question { QuestionId = 63, Caption = "How can I turn into a cat?", Url = "http://gaming.stackexchange.com/questions/143469/how-can-i-turn-into-a-cat" },
+                new ContextIsNeeded_Question { QuestionId = 64, Caption = "How do I make cats less proud?", Url = "http://gaming.stackexchange.com/questions/37573/how-do-i-make-cats-less-proud" },
+                new ContextIsNeeded_Question { QuestionId = 65, Caption = "How to get over losing pennies all the time?", Url = "http://stackoverflow.com/questions/6915458/how-to-get-over-losing-pennies-all-the-time"},
+                new ContextIsNeeded_Question { QuestionId = 66, Caption = "Is it possible to know the position of mom?", Url = "http://space.stackexchange.com/questions/4842/is-it-possible-to-know-the-position-of-mom" },
+                new ContextIsNeeded_Question { QuestionId = 67, Caption = "Can you be afraid if you're dead?", Url = "http://rpg.stackexchange.com/questions/39510/can-you-be-afraid-if-youre-dead" },
+                new ContextIsNeeded_Question { QuestionId = 68, Caption = "How do I Raise the Dead and Look Good Doing it?", Url = "http://rpg.stackexchange.com/questions/37309/how-do-i-raise-the-dead-and-look-good-doing-it" }
                 );
         }
 

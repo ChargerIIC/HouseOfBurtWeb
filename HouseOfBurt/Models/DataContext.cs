@@ -18,6 +18,7 @@ namespace HouseOfBurt.Models
 
         #region Applications
 
+        public DbSet<Application> WebApplications { get; set; }
         public DbSet<ContextIsNeeded_Question> ContextIsNeededQuestions { get; set; }
 
         #endregion Applications
