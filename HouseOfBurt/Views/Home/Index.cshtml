@@ -50,7 +50,7 @@
     {
         <div class="col-md-2 childPanel panel panel-primary">
             <h2>@product.Name</h2>
-            <img src="@Url.Content(product.ImageUrl)" class="img-thumbnail"/>
+            <img src="@Url.Content(product.ImageUrl)" class="img-thumbnail" alt="@{ "screenshot of" + product.Name} "/>
             <p>@product.ShortDescription</p>
             <p>@Html.ActionLink(@"Learn More", "Detail", "Product", new { @id = product.ProductId }, new { @class = "btn btn-primary" })</p>
         </div>
