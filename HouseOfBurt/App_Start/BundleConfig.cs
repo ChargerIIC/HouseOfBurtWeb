@@ -15,7 +15,8 @@ namespace HouseOfBurt
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/layoutjs").Include(
-                        "~/Scripts/Layout.js"));
+                        "~/Scripts/Layout.js",
+                        "~/Scripts/google.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
