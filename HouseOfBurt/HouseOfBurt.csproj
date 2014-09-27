@@ -173,6 +173,7 @@
     <Content Include="Content\img\ContextIsNeeded.png" />
     <Content Include="Content\img\Context_Is_Needed.jpg" />
     <Content Include="Content\img\DealORound.jpg" />
+    <Content Include="Content\img\Error500.jpg" />
     <Content Include="Content\img\FileZapper.png" />
     <Content Include="Content\img\GeekWiseLogo.jpg" />
     <Content Include="Content\img\HPWarrantyReporter.PNG" />
@@ -198,6 +199,7 @@
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\google.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
