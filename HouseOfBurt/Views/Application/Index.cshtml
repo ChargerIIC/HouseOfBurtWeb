@@ -9,6 +9,15 @@
 {
 }
 
+@section Meta{
+    <meta name="keywords" content="HouseOfBurt web based applications devlopment example" />
+    <meta property="og:description" content="House Of Burt Web Applications" />
+    <meta name="description" content="House Of Burt Web Applications" />
+    <meta property="og:url" content="@Url.Action("Index", "Application", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = "Index" }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+    <meta property="og:image" content="@Url.Content("~/Content/img/Logo.png")"/>
+    <link rel="canonical" href="@Url.Action("Index", "Application", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = "Index" }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+}
+
 <div class="center-block"><h2>Web Applications</h2></div>
 
 <div class="container-fluid">

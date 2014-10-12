@@ -8,11 +8,23 @@
 @section SideBarContent {
 @foreach (Article newsArticle in ViewBag.NewsItems)
 {
-    foreach (Link link in newsArticle.Links)
+    if(newsArticle.Links.Any())
     {
-        <a href="@link.URL" class="list-group-item">@link.Caption</a>
+        foreach (Link link in newsArticle.Links)
+        {
+            <a href="@link.URL" class="list-group-item">@link.Caption</a>
+        }
     }
 }
+}
+
+@section Meta{
+    <meta name="keywords" content="" />
+    <meta property="og:description" content="News Articles about House Of Burts Software Developement and Local Developer events." />
+    <meta name="description" content="News Articles about House Of Burts Software Developement and Local Developer events." />
+    <meta property="og:url" content="@Url.Action("Index", "News", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = "News" }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+    <meta property="og:image" content="@Url.Content("~/Content/img/Logo.png")" />
+    <link rel="canonical" href="@Url.Action("Index", "News", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = "News" }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
 }
 
 <div class="page-header"><h2>@ViewBag.Header</h2></div><br/>

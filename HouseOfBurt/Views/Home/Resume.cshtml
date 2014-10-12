@@ -9,6 +9,15 @@
     <a href="http://www.centralcaldotnet.com/" class="list-group-item">Central Valley .Net User Group</a>
 }
 
+@section Meta{
+    <meta name="keywords" content="HouseOfBurt Burt fresno software developer asp mvc c# f# visual studio hire work resume hiring" />
+    <meta property="og:description" content="Resume of Vernon Burt, Local Developer" />
+    <meta name="description" content="Resume of Vernon Burt, Local Developer" />
+    <meta property="og:url" content="@Url.Action("Resume", "Home", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = "Index" }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+    <meta property="og:image" content="@Url.Content("~/Content/img/Logo.png")" />
+    <link rel="canonical" href="@Url.Action("Resume", "Home", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = "Index" }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+}
+
 <div class="resume">
     <section class="row">
         <h2 style="text-align: center"><strong>Vernon Burt</strong></h2>
@@ -51,6 +60,7 @@
             <li>Worked on Company's flagship EnvisionConnect Product</li>
             <li>Developed code using C#, Winforms, WPF, SQL, IdeaBlade and DevExpress Technologies</li>
             <li>Supported Delphi6-based applications and wrote software patches for same</li>
+            <li>Developer GIS based features for primary product, including ESRI based GIS features</li>
             <li>Wrote Crystal Reports and supported the application's report viewer. </li>
             <li>Worked with customers regarding escalated issues such as customer report creation or Data related problems</li>
             <li>Worked with multiple developers to reduce team's bus factor through cross-training</li>

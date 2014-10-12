@@ -1,7 +1,16 @@
-﻿@using System.Data.Entity.Core.Metadata.Edm
+﻿
 @using Microsoft.Ajax.Utilities
 @{
     ViewBag.Title = "Home Page";
+}
+
+@section Meta{
+    <meta name="keywords" content="HouseOfBurt Burt fresno software development program warranty download local developer" />
+    <meta property="og:description" content="House Of Burt Software and News site" />
+    <meta name="description" content="House Of Burt Software and News site" />
+    <meta property="og:url" content="@Url.Action("Index", "Home", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = "Index" }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+    <meta property="og:image" content="@Url.Content("~/Content/img/Logo.png")" @*@Request.Url.GetLeftPart(UriPartial.Authority) />Content/images/auction.jpg"*@ />
+    <link rel="canonical" href="@Url.Action("Index", "Home", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = "Index" }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
 }
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">

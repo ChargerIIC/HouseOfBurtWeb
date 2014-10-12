@@ -4,9 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/base/css")
-    @Scripts.Render("~/bundles/modernizr")
-    @RenderSection("css", required: false)
+    <meta property="og:title" content="@ViewBag.Title" />
+    @RenderSection("Meta", required:false)
 </head>
     <body>
 
@@ -86,6 +85,10 @@
                 </div>
             </div>
         </div>
+        
+        @Styles.Render("~/Content/base/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @RenderSection("css", required: false)
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")

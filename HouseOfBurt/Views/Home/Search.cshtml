@@ -8,7 +8,7 @@
 
 @foreach (var article in ViewBag.Results)
 {
-    <h4>@Html.ActionLink(article.Title as String, "Detail", "News", new { id = article.ArticleId})</h4>
+    <h4>@Html.ActionLink(article.Title as String, "Detail", "News", new { id = article.ArticleId })</h4>
     <p>@Html.Raw(article.getArticleSummary(400))</p>
     @Html.ActionLink("Read More", "Detail", "News", new { id = article.ArticleId }, new { @class = "btn btn-primary"})
 

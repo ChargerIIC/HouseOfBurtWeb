@@ -15,6 +15,15 @@
     }
 }
 
+@section Meta{
+    <meta name="keywords" content="software download product HouseOfBurt" />
+    <meta property="og:description" content="News Articles about House Of Burts Software Developement and Local Developer events." />
+    <meta name="description" content="News Articles about House Of Burts Software Developement and Local Developer events." />
+    <meta property="og:url" content="@Url.Action("Index", "Product", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = "Index" }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+    <meta property="og:image" content="@Url.Content("~/Content/img/Logo.png")" />
+    <link rel="canonical" href="@Url.Action("Index", "Product", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = "Index" }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+}
+
 <div class="container-fluid">
     <h2>All Products</h2>
     <br/>

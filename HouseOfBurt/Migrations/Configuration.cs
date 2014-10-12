@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Web.Services.Description;
 using HouseOfBurt.Models;
 
 namespace HouseOfBurt.Migrations
@@ -60,11 +61,12 @@ namespace HouseOfBurt.Migrations
             serviceTag = new Product
             {
                 ProductId = 1,
-                Name = "Service Tag Reporter",
+                Slug = "Service-Tag-Reporter",
                 ImageUrl = @"../Content/img/ServiceTagReporter150.png",
                 Description = Properties.Resources.ServiceTagDescription,
                 ShortDescription = Properties.Resources.ServiceTagShortDescription,
                 SourceLink = link4,
+                Keywords = "service tag reporter software utility download dell warranty",
                 Versions = new List<Models.Version>
                 {
                     new Models.Version
@@ -132,10 +134,11 @@ namespace HouseOfBurt.Migrations
             hpWarranty = new Product
             {
                 ProductId = 2,
-                Name = "HP Warranty Reporter",
-                ImageUrl = @"http://houseofburt.files.wordpress.com/2012/05/screenshot.png",
+                Slug = "HP-Warranty-Reporter",
+                ImageUrl = @"../Content/img/HPWarrantyReporter.png",
                 Description = Properties.Resources.HpWarrantyDescription,
                 ShortDescription = Properties.Resources.HpWarrantyShortDescription,
+                Keywords = "hp warranty reporter download software utlity IT",
                 SourceLink = link5,
                 Versions =
                     new List<Models.Version>
@@ -151,10 +154,11 @@ namespace HouseOfBurt.Migrations
             fileZap = new Product
             {
                 ProductId = 3,
-                Name = "File Zapper",
-                ImageUrl = @"http://houseofburt.files.wordpress.com/2012/05/filezapperscreenshot.png",
+                Slug = "File-Zapper",
+                ImageUrl = @"../Content/img/FileZapper.png",
                 Description = Properties.Resources.FileZapperDescription,
                 ShortDescription = Properties.Resources.FileZapperShortDescription,
+                Keywords = "filezapper delete network files download utility software",
                 SourceLink = link6,
                 Versions =
                     new List<Models.Version>
@@ -165,10 +169,11 @@ namespace HouseOfBurt.Migrations
             dealORound = new Product
             {
                 ProductId = 4,
-                Name = "Deal O Round",
+                Slug = "Deal-O-Round",
                 ImageUrl = "../Content/img/DealORound.jpg",
                 Description = Properties.Resources.DealORoundDescription,
                 ShortDescription = Properties.Resources.DealORoundShortDescription,
+                Keywords = "dealoround poker playn game java development"
             };
             context.Products.AddOrUpdate(serviceTag, hpWarranty, fileZap, dealORound);
         }
@@ -212,18 +217,18 @@ namespace HouseOfBurt.Migrations
         private void seedArticles(DataContext context)
         {
             context.Articles.AddOrUpdate(
-                new Article { ArticleId = 1, Title = "Welcome to the House Of Burt!", Content = Properties.Resources.Article1Content, CreationDate = DateTime.Parse("2012-04-27"), Tags = new List<Category> { webCategory, personalCategory }, Links = new List<Link> { link4, link5 }, PictureUrl = "../Content/img/logo.png" },
-                new Article { ArticleId = 2, Title = "Service Tag Reporter 1.4 released", Content = Properties.Resources.Article2Content, CreationDate = DateTime.Parse("2012-04-28"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link4 }, PictureUrl = "../Content/img/ServiceTagReporter150.png" },
-                new Article { ArticleId = 3, Title = "File Zapper 1.2 released", Content = Properties.Resources.Article3Content, CreationDate = DateTime.Parse("2012-05-12"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link6 }, PictureUrl = "../Content/img/FileZapper.png" },
-                new Article { ArticleId = 4, Title = "Service Tag Reporter 1.4.1 Released", Content = Properties.Resources.Article4Content, CreationDate = DateTime.Parse("2012-05-12"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link4 }, PictureUrl = "../Content/img/ServiceTagReporter150.png" },
-                new Article { ArticleId = 5, Title = "HP Warranty Reporter 1.1 released", Content = Properties.Resources.Article5Content, CreationDate = DateTime.Parse("2012-05-14"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link5 }, PictureUrl = "../Content/img/HPWarrantyReporter.PNG" },
-                new Article { ArticleId = 6, Title = "HP Warranty Reporter 1.1.1 patch released", Content = Properties.Resources.Article6Content, CreationDate = DateTime.Parse("2012-05-29"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link5 }, PictureUrl = "../Content/img/HPWarrantyReporter.PNG" },
-                new Article { ArticleId = 7, Title = "Service Tag Reporter 1.5 Released", Content = Properties.Resources.Article7Content, CreationDate = DateTime.Parse("2013-09-22"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link4 }, PictureUrl = "../Content/img/ServiceTagReporter150.png" },
-                new Article { ArticleId = 8, Title = "Starting out in Monogame", Content = Properties.Resources.Article8Content, CreationDate = DateTime.Parse("2013-10-26"), Tags = new List<Category> { personalCategory }, Links = new List<Link> { link1, link3, link7, link8, link9 }, PictureUrl = "../Content/img/MonoGameLogo_512px.png" },
-                new Article { ArticleId = 9, Title = "Service Tag Reporter 1.6 Released", Content = Properties.Resources.Article9Content, CreationDate = DateTime.Parse("11/29/2013"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link4 }, PictureUrl = "../Content/img/ServiceTagReporter150.png" },
-                new Article { ArticleId = 10, Title = "Geekwise Academy", Content = Properties.Resources.Article10Content, CreationDate = DateTime.Parse("12/03/2013"), Tags = new List<Category> { personalCategory }, Links = new List<Link> { link10, link11 }, PictureUrl = "../Content/img/GeekWiseLogo.jpg" },
-                new Article { ArticleId = 11, Title = "Migrating from Django to Asp.Net", Content = Properties.Resources.Article11Content, CreationDate = DateTime.Parse("08/10/2014"),Tags = new List<Category> { webCategory }, PictureUrl = "../Content/img/asp-net-logo.png"},
-                new Article { ArticleId = 12, Title = "Context Is Needed Launch", Content = Properties.Resources.Article12Content, CreationDate = new DateTime(2014, 09, 14), Tags = new List<Category> { webCategory, softwareCategory }, Links = new List<Link> { link13, link14, link15, link16 }, PictureUrl = "../Content/img/Context_Is_Needed.jpg" }
+                new Article { ArticleId = 1, Slug = "Welcome-to-the-House-Of-Burt!", Keywords = "Welcome House Of Burt Launch",Content = Properties.Resources.Article1Content, CreationDate = DateTime.Parse("2012-04-27"), Tags = new List<Category> { webCategory, personalCategory }, Links = new List<Link> { link4, link5 }, PictureUrl = "../Content/img/logo.png" },
+                new Article { ArticleId = 2, Slug = "Service-Tag-Reporter-1.4-released", Keywords = "Service Tag Reporter News 1.4",Content = Properties.Resources.Article2Content, CreationDate = DateTime.Parse("2012-04-28"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link4 }, PictureUrl = "../Content/img/ServiceTagReporter150.png" },
+                new Article { ArticleId = 3, Slug = "File-Zapper-1.2-released", Keywords = "File Zapper 1.2 News",Content = Properties.Resources.Article3Content, CreationDate = DateTime.Parse("2012-05-12"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link6 }, PictureUrl = "../Content/img/FileZapper.png" },
+                new Article { ArticleId = 4, Slug = "Service-Tag-Reporter-1.4.1-Released",Keywords = "Service Tag Reporter News 1.4.1 patch", Content = Properties.Resources.Article4Content, CreationDate = DateTime.Parse("2012-05-12"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link4 }, PictureUrl = "../Content/img/ServiceTagReporter150.png" },
+                new Article { ArticleId = 5, Slug = "HP-Warranty-Reporter-1.1-released",Keywords = "HP Warranty Reporter News 1.1", Content = Properties.Resources.Article5Content, CreationDate = DateTime.Parse("2012-05-14"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link5 }, PictureUrl = "../Content/img/HPWarrantyReporter.PNG" },
+                new Article { ArticleId = 6, Slug = "HP-Warranty-Reporter-1.1.1-patch-released", Keywords = "HP Warranty Reporter News 1.1.1", Content = Properties.Resources.Article6Content, CreationDate = DateTime.Parse("2012-05-29"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link5 }, PictureUrl = "../Content/img/HPWarrantyReporter.PNG" },
+                new Article { ArticleId = 7, Slug = "Service-Tag-Reporter-1.5-Released", Keywords = "Service Tag Reporter News 1.5 release", Content = Properties.Resources.Article7Content, CreationDate = DateTime.Parse("2013-09-22"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link4 }, PictureUrl = "../Content/img/ServiceTagReporter150.png" },
+                new Article { ArticleId = 8, Slug = "Starting-out-in-Monogame", Keywords = "Monogame developement C# getting started how work", Content = Properties.Resources.Article8Content, CreationDate = DateTime.Parse("2013-10-26"), Tags = new List<Category> { personalCategory }, Links = new List<Link> { link1, link3, link7, link8, link9 }, PictureUrl = "../Content/img/MonoGameLogo_512px.png" },
+                new Article { ArticleId = 9, Slug = "Service-Tag-Reporter-1.6-Released", Keywords = "Service Tag Reporter 1.6 news release", Content = Properties.Resources.Article9Content, CreationDate = DateTime.Parse("11/29/2013"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link4 }, PictureUrl = "../Content/img/ServiceTagReporter150.png" },
+                new Article { ArticleId = 10, Slug = "Geekwise-Academy", Keywords = "Geekwise Academy Review testimonial fresno ca", Content = Properties.Resources.Article10Content, CreationDate = DateTime.Parse("12/03/2013"), Tags = new List<Category> { personalCategory }, Links = new List<Link> { link10, link11 }, PictureUrl = "../Content/img/GeekWiseLogo.jpg" },
+                new Article { ArticleId = 11, Slug = "Migrating-from-Django-to-Asp.Net", Keywords = "migration django asp c# python", Content = Properties.Resources.Article11Content, CreationDate = DateTime.Parse("08/10/2014"),Tags = new List<Category> { webCategory }, PictureUrl = "../Content/img/asp-net-logo.png"},
+                new Article { ArticleId = 12, Slug = "Context-Is-Needed-Launch", Keywords = "ContextIsNeeded StackExchange funny stupid questions", Content = Properties.Resources.Article12Content, CreationDate = new DateTime(2014, 09, 14), Tags = new List<Category> { webCategory, softwareCategory }, Links = new List<Link> { link13, link14, link15, link16 }, PictureUrl = "../Content/img/Context_Is_Needed.jpg" }
                 );
         }
 
