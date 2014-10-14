@@ -96,6 +96,15 @@ namespace HouseOfBurt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to I recently was given a task to determine if a report in the crystal report viewer contained a particular instance of a Custom UFL. There is a lot of utility in checking for the presence of a custom function, including displaying a warning about the Ufl (or its deprecation), only running needed application functionality if the UFL that needs it is present, or even checking to see if the user&apos;s environment meets the UFLs requirements. Despite this I couldn&apos;t find any articles or StackOverflow questions addres [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Article13Content {
+            get {
+                return ResourceManager.GetString("Article13Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;Welcome to the home of HouseOfBurt. Here you will find access to several utilities that are targeted towards making life with computers a little easier than they are now. You can look at the current software offerings under the &lt;a title=&quot;Products&quot; href=&quot;http://houseofburt.wordpress.com/products/&quot;&gt;Products&lt;/a&gt; page. If you have any questions/comments please feel free to contact me.&lt;/p&gt;.
         /// </summary>
         public static string Article1Content {

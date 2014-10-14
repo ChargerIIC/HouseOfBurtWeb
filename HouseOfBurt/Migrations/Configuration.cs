@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Web.Services.Description;
 using HouseOfBurt.Models;
 
@@ -31,8 +32,8 @@ namespace HouseOfBurt.Migrations
         private Link link14;
         private Link link15;
         private Link link16;
-
-
+        private Link link17;
+        private Link link18;
 
         private Product serviceTag;
         private Product hpWarranty;
@@ -181,7 +182,8 @@ namespace HouseOfBurt.Migrations
         private void seedApplications(DataContext context)
         {
             context.WebApplications.AddOrUpdate(
-                new Application{ ApplicationId = 1, Action="ContextIsNeeded", Name="Context is Needed", Description="ContextIsNeeded is a web application that points out some of the foibles in the famous StackExchange network. Curated questions are presented without context, leading the user to wonder just what are they asking over there. Questions are pulled from throughout the network, including StackOverflow, Gaming, and Workplace exchanges."});
+                new Application{ ApplicationId = 1, Action="ContextIsNeeded", Name="Context is Needed", Description="ContextIsNeeded is a web application that points out some of the foibles in the famous StackExchange network. Curated questions are presented without context, leading the user to wonder just what are they asking over there. Questions are pulled from throughout the network, including StackOverflow, Gaming, and Workplace exchanges."},
+                new Application{ ApplicationId = 2, Action = "FresnoPopulationMap", Name = "Fresno Population Map", Description="A simple map that displays Fresno's population density. Larger circles indicate a more 'dense' population area. Application is location-aware"});
         }
 
         private void seedLinks(DataContext context)
@@ -202,7 +204,9 @@ namespace HouseOfBurt.Migrations
                 link13 = new Link { LinkId = 13, Caption = "Context Is Needed", URL="http://www.contextisneeded.com"},
                 link14 = new Link { LinkId = 14, Caption = "Stack Exchange", URL = "http://stackexchange.com" },
                 link15 = new Link { LinkId = 15, Caption = "Jquery Backstretch", URL="http://srobbin.com/jquery-plugins/backstretch/"},
-                link16 = new Link { LinkId = 16, Caption = "Design For Hackers", URL = "http://designforhackers.com/" }
+                link16 = new Link { LinkId = 16, Caption = "Design For Hackers", URL = "http://designforhackers.com/" },
+                link17 = new Link { LinkId = 17, Caption = "Crystal Reports SDK", URL = "http://scn.sap.com/docs/DOC-35632" },
+                link18 = new Link { LinkId = 18, Caption = "Crystal Reports", URL = "http://www.crystalreports.com/" }
                 );
         }
 
@@ -228,7 +232,8 @@ namespace HouseOfBurt.Migrations
                 new Article { ArticleId = 9, Slug = "Service-Tag-Reporter-1.6-Released", Keywords = "Service Tag Reporter 1.6 news release", Content = Properties.Resources.Article9Content, CreationDate = DateTime.Parse("11/29/2013"), Tags = new List<Category> { softwareCategory }, Links = new List<Link> { link4 }, PictureUrl = "../Content/img/ServiceTagReporter150.png" },
                 new Article { ArticleId = 10, Slug = "Geekwise-Academy", Keywords = "Geekwise Academy Review testimonial fresno ca", Content = Properties.Resources.Article10Content, CreationDate = DateTime.Parse("12/03/2013"), Tags = new List<Category> { personalCategory }, Links = new List<Link> { link10, link11 }, PictureUrl = "../Content/img/GeekWiseLogo.jpg" },
                 new Article { ArticleId = 11, Slug = "Migrating-from-Django-to-Asp.Net", Keywords = "migration django asp c# python", Content = Properties.Resources.Article11Content, CreationDate = DateTime.Parse("08/10/2014"),Tags = new List<Category> { webCategory }, PictureUrl = "../Content/img/asp-net-logo.png"},
-                new Article { ArticleId = 12, Slug = "Context-Is-Needed-Launch", Keywords = "ContextIsNeeded StackExchange funny stupid questions", Content = Properties.Resources.Article12Content, CreationDate = new DateTime(2014, 09, 14), Tags = new List<Category> { webCategory, softwareCategory }, Links = new List<Link> { link13, link14, link15, link16 }, PictureUrl = "../Content/img/Context_Is_Needed.jpg" }
+                new Article { ArticleId = 12, Slug = "Context-Is-Needed-Launch", Keywords = "ContextIsNeeded StackExchange funny stupid questions", Content = Properties.Resources.Article12Content, CreationDate = new DateTime(2014, 09, 14), Tags = new List<Category> { webCategory, softwareCategory }, Links = new List<Link> { link13, link14, link15, link16 }, PictureUrl = "../Content/img/Context_Is_Needed.jpg" },
+                new Article { ArticleId = 13, Slug = "How-To-Programmaticly-Detect-Ufls-In-Crystal-Reports", Keywords = "crystal reports ufl c# tutorial detect", Content = Properties.Resources.Article13Content, CreationDate = new DateTime(2014, 10, 14), Tags = new List<Category> { softwareCategory}, Links = new List<Link>{ link17, link18}, PictureUrl = "../Content/img/CrystalFormula.png"}
                 );
         }
 

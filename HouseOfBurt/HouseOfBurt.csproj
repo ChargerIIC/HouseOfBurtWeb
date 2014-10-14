@@ -172,6 +172,7 @@
     <Content Include="Content\img\ComputerAsk.jpg" />
     <Content Include="Content\img\ContextIsNeeded.png" />
     <Content Include="Content\img\Context_Is_Needed.jpg" />
+    <Content Include="Content\img\CrystalFormula.png" />
     <Content Include="Content\img\DealORound.jpg" />
     <Content Include="Content\img\Error500.jpg" />
     <Content Include="Content\img\FileZapper.png" />

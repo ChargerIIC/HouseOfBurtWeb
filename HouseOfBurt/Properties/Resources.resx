@@ -157,6 +157,20 @@ Welcome to the new version of &lt;a href="https://HouseofBurt.com"&gt;House of B
 &lt;p&gt;Api calls are also used for the submission endpoint, which allows me to leverage SendGrid and have users of the site submit their own questions for review. Floating divs are summoned for the about and submit dialogs, which can be closed by either clicking again on the menu item or on the top bar a-la-windows or macintosh. The divs use Bootstrap panels, which are surprisingly difficult to get working within Bootstrap's famous column system. &lt;/p&gt; 
 &lt;p&gt;I feel like this project met its goals but also challenged me greatly in an unexpected direction - visual design. As a developer I find it very easy to write code, but figuring out the best way to convey information to a user is a very complex beast that can't be learned overnight. I've started reading &lt;I&gt;Design for Hackers&lt;/i&gt; by &lt;a href="http://designforhackers.com/"&gt;David Kadavy&lt;/a&gt; ( a note on his site: scroll down to find the content, its not just the email signup). Hopefully this will help me address issue such as the pop-up menu - I'm still not happy with it. If you have any feedback for me on the application or ran into any issues please feel free to contact me at &lt;a href="mailto:HouseOfBurtSoftware@Yahoo.com"&gt;HouseOfBurt Software&lt;/a&gt;</value>
   </data>
+  <data name="Article13Content" xml:space="preserve">
+    <value>I recently was given a task to determine if a report in the crystal report viewer contained a particular instance of a Custom UFL. There is a lot of utility in checking for the presence of a custom function, including displaying a warning about the Ufl (or its deprecation), only running needed application functionality if the UFL that needs it is present, or even checking to see if the user's environment meets the UFLs requirements. Despite this I couldn't find any articles or StackOverflow questions addressing the topic.&lt;/p&gt;  
+&lt;/p&gt;Luckily, the Crystal SDK doesn't disappoint in this area. The SDK takes a pretty unique approach to serving data about a report - it mainly serves several read-only collections that can be used to determine the internal makeup of the report's formulas and schema. Most of these can be found in the ReportDocument object's&lt;I&gt;DataDefinition&lt;/i&gt; property. It's while rooting through here when I found  the FormulaFields collection and its handy list of every formula contained in the report file. &lt;/p&gt; 
+&lt;p&gt;The following method sits in my overloaded class that inherits from ReportDocument. It returns true if the formula's text is present and false if it is not. The text part is important - the raw text of the formulas is being presented here:&lt;/p&gt; 
+public bool IsCustomUflPresent &lt;br/&gt;
+{
+&lt;br/&gt; 
+&lt;span style="margin-left:2em"/&gt;get&lt;br/&gt; 
+&lt;span style="margin-left:2em"/&gt;{&lt;br/&gt; 
+&lt;span style="margin-left:4em"/&gt;return this.DataDefinition.FormulaFields.Cast&lt;FormulaFieldDefinition&gt;().Any(x =&gt; x.Text.Contains("CustomUfl("));&lt;br/&gt; 
+&lt;span style="margin-left:2em"/&gt;}&lt;br/&gt; 
+}&lt;br/&gt; 
+&lt;p&gt;As you can probably guess, performance scales according to how many formulas are present in the report (sans data). I've handled reports up to 100 formulas without trouble, but you should always be careful when you mix Linq and text searching.</value>
+  </data>
   <data name="Article1Content" xml:space="preserve">
     <value>&lt;p&gt;Welcome to the home of HouseOfBurt. Here you will find access to several utilities that are targeted towards making life with computers a little easier than they are now. You can look at the current software offerings under the &lt;a title="Products" href="http://houseofburt.wordpress.com/products/"&gt;Products&lt;/a&gt; page. If you have any questions/comments please feel free to contact me.&lt;/p&gt;</value>
   </data>
