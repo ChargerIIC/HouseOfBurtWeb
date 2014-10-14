@@ -1,4 +1,5 @@
-﻿
+﻿@using Microsoft.Ajax.Utilities
+
 @{
     ViewBag.Title = "Search";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,11 +7,13 @@
 
 <h2>Showing results for: @ViewBag.SearchTerm</h2>
 
-@foreach (var article in ViewBag.Results)
+@if (ViewBag.Results != null)
 {
-    <h4>@Html.ActionLink(article.Title as String, "Detail", "News", new { id = article.ArticleId })</h4>
-    <p>@Html.Raw(article.getArticleSummary(400))</p>
-    @Html.ActionLink("Read More", "Detail", "News", new { id = article.ArticleId }, new { @class = "btn btn-primary"})
+ foreach (Article article in ViewBag.Results)
+ {
+     <h4>@Html.ActionLink(article.Title, "Detail", "News", new {id = article.ArticleId})</h4>
+     <p>@Html.Raw(article.getArticleSummary(400))</p>
+     @Html.ActionLink("Read More", "Detail", "News", new {id = article.ArticleId}, new {@class = "btn btn-primary"})
 
+ }
 }
-

@@ -45,8 +45,8 @@ namespace HouseOfBurt.Controllers
 
             if (search == null) return RedirectToAction("Index");
 
-            ViewBag.Results = DataService.Instance.Database.Articles.Where(x => x.Title.Contains(search));
-
+            var results = DataService.Instance.Database.Articles.Where(x => x.Slug.Contains(search));
+            ViewBag.Results = results;
             return View();
         }
 
