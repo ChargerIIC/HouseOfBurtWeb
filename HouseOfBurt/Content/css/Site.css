@@ -15,7 +15,7 @@ p {
     padding-right: 15px;
 }
 
-.navbar-inverse {
+.navbar-inverse, .navbar-header, .navbar-collapse, .navbar>.container-fluid {
     background-color: rgb(27, 161, 226);
     
 }
@@ -30,6 +30,10 @@ p {
 
 .navbar-inverse .navbar-brand {
 color: #ffffff;
+}
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: 10px;
 }
 
 /* Carousel base class */
@@ -116,6 +120,11 @@ textarea {
     top  :150px;
     color:#779DD7;
     padding:2px 4px;
+}
+
+
+.padRight20 {
+    margin-right: 20px;
 }
 
 .hOffset10{padding-left: 10px}

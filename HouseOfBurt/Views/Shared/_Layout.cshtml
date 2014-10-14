@@ -8,91 +8,97 @@
     @RenderSection("Meta", required:false)
 </head>
     <body>
-
-        <div role="navigation" class="navbar navbar-default navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <ul class="nav navbar-nav navbar-inverse">
-                        <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "navbar-brand" })</li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">News <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>@Html.ActionLink("Software News", "Category", "News", new { @category = "Software"}, new { @role="menuitem"})</li>
-                                <li>@Html.ActionLink("Blog Posts", "Category", "News", new { @category = "Personal"},new { @role="menuitem" })</li>
-                                <li class="divider"></li>
-                                <li>@Html.ActionLink("All News", "Index", "News", null, new { @role="menuitem"})</li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>@Html.ActionLink("Service Tag Reporter", "Detail", "Product", new { @id = 1 }, new { @role = "menuitem" })</li>
-                                <li>@Html.ActionLink("HP Warranty Reporter", "Detail", "Product", new { @id = 2 }, new { @role = "menuitem" })</li>
-                                <li>@Html.ActionLink("File Zapper", "Detail", "Product", new { @id = 3 }, new { @role = "menuitem" })</li>
-                                <li>@Html.ActionLink("Deal O Round", "Detail", "Product", new { @id = 4 }, new { @role = "menuitem" })</li>
-                                <li>@Html.ActionLink("All Products", "Index", "Product",null,new { @role="menuitem" })</li>
-                            </ul>
-                        </li>
-                        <li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Source Code<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="https://bitbucket.org/HouseOfBurt/service-tag-reporter/src">Service Tag Reporter Repo<span class="caret"></span></a></li>
-                                <li>@Html.ActionLink("All Products", "Index", "Product")</li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>@Html.ActionLink("Context Is Needed", "ContextIsNeeded", "Application")</li>
-                                <li>@Html.ActionLink("All Applications", "Index", "Application", null, new { @role = "menuitem" })</li>
-                            </ul>
-                        </li>
-                        <li>@Html.ActionLink("Resume", "Resume", "Home")</li>
-                    </ul>
-                </div>
-                @using (Html.BeginForm("Search", "Home"))
-                {
-                    @Html.TextBox("search",null, new{ @class="pull-right"})
-                }
-            </div>
-
-        </div>
-        
         <div class="container-fluid">
-            <div class="row-fluid">
-                @if (IsSectionDefined("SideBarContent"))
-                {
-                    <div id="sidebar" class="col-lg-3 col-md-2">
-                    
-                        <div class="list-group">
-                            <a href="#" class="list-group-item active">Important Links</a>
-                            @RenderSection("SideBarContent", required: false)
-                        </div>
+            <div role="navigation" class="navbar navbar-default navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Home", "Index", "Home", null, new { @class = "navbar-brand" })
                     </div>
-                }
-                <div id="content" class=@(IsSectionDefined("SideBarContent") ? "col-lg-9 col-md-10" : "span12")>
-                    @RenderBody()
-                    <footer>
-                        <p>&copy; @DateTime.Now.Year - House Of Burt Software</p>
-                    </footer>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-inverse">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">News <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>@Html.ActionLink("Software News", "Category", "News", new { @category = "Software" }, new { @role = "menuitem" })</li>
+                                    <li>@Html.ActionLink("Blog Posts", "Category", "News", new { @category = "Personal" }, new { @role = "menuitem" })</li>
+                                    <li class="divider"></li>
+                                    <li>@Html.ActionLink("All News", "Index", "News", null, new { @role = "menuitem" })</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>@Html.ActionLink("Service Tag Reporter", "Detail", "Product", new { @id = 1 }, new { @role = "menuitem" })</li>
+                                    <li>@Html.ActionLink("HP Warranty Reporter", "Detail", "Product", new { @id = 2 }, new { @role = "menuitem" })</li>
+                                    <li>@Html.ActionLink("File Zapper", "Detail", "Product", new { @id = 3 }, new { @role = "menuitem" })</li>
+                                    <li>@Html.ActionLink("Deal O Round", "Detail", "Product", new { @id = 4 }, new { @role = "menuitem" })</li>
+                                    <li>@Html.ActionLink("All Products", "Index", "Product", null, new { @role = "menuitem" })</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Source Code<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="https://bitbucket.org/HouseOfBurt/service-tag-reporter/src">Service Tag Reporter Repo<span class="caret"></span></a></li>
+                                    <li>@Html.ActionLink("All Products", "Index", "Product")</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>@Html.ActionLink("Context Is Needed", "ContextIsNeeded", "Application")</li>
+                                    <li>@Html.ActionLink("All Applications", "Index", "Application", null, new { @role = "menuitem" })</li>
+                                </ul>
+                            </li>
+                            <li class="navbar-link">@Html.ActionLink("Resume", "Resume", "Home")</li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                @using (Html.BeginForm("Search", "Home"))
+                                {
+                                    @Html.TextBox("search", null, new { @class = "" })
+                                    <a class="glyphicon glyphicon-search padRight20"></a>
+                                }
+                            </li>
+                        </ul>
 
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        @Styles.Render("~/Content/base/css")
-        @Scripts.Render("~/bundles/modernizr")
-        @RenderSection("css", required: false)
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
-        @Scripts.Render("~/bundles/layoutjs")
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    @if (IsSectionDefined("SideBarContent"))
+                    {
+                        <div id="sidebar" class="col-lg-3 col-md-2">
+
+                            <div class="list-group">
+                                <a href="#" class="list-group-item active">Important Links</a>
+                                @RenderSection("SideBarContent", required: false)
+                            </div>
+                        </div>
+                    }
+                    <div id="content" class=@(IsSectionDefined("SideBarContent") ? "col-lg-9 col-md-10" : "span12")>
+                        @RenderBody()
+                        <footer>
+                            <p>&copy; @DateTime.Now.Year - House Of Burt Software</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            @Styles.Render("~/Content/base/css")
+            @Scripts.Render("~/bundles/modernizr")
+            @RenderSection("css", required: false)
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+            @Scripts.Render("~/bundles/layoutjs")
+        </div>
     </body>
 </html>
