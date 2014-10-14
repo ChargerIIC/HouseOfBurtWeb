@@ -40,6 +40,11 @@ namespace HouseOfBurt.Controllers
             return View();
         }
 
+        public ActionResult FresnoPopulationMap()
+        {
+            return View();
+        }
+
         public ActionResult ContextIsNeeded()
         {
             return View();

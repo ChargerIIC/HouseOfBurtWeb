@@ -242,6 +242,7 @@
     <Content Include="Views\Application\_ApplicationLayout.cshtml" />
     <Content Include="Views\Application\ContextIsNeeded.cshtml" />
     <Content Include="Views\News\Article.cshtml" />
+    <Content Include="Views\Application\FresnoPopulationMap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

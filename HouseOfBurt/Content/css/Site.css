@@ -36,6 +36,10 @@ color: #ffffff;
     margin-right: 10px;
 }
 
+.nav-pills>li {
+    background-color: white;
+}
+
 /* Carousel base class */
 .carousel {
   height: 500px;

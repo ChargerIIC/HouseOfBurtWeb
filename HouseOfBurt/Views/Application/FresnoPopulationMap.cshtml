@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "FresnoPopulationMap";
+    Layout = "~/Views/Application/_ApplicationLayout.cshtml";
+}
+
+@section Css
+{
+    <link rel="stylesheet" href="http://js.arcgis.com/3.11/esri/css/esri.css">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.7/js/dojo/dijit/themes/claro/claro.css">
+    <style>
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: teal;
+            overflow: hidden;
+            font-family: "Garamound";
+        }
+
+        #map {
+            position: absolute;
+        }
+
+        .list-group {
+            z-index: 10;
+        }
+
+        .dijitReset {
+            margin-top: 5%;
+        }
+    </style>
+}
+
+@section scripts
+{
+    <script src="http://js.arcgis.com/3.11/"></script>
+<script>
+    var map;
+    var latitude = 36.8081204;
+    var longitude = -119.8662133
+      require(["esri/map", "dojo/domReady!"], function(Map) {
+        map = new Map("map", {
+          basemap: "streets",
+          center: [-119.8662133, 36.8081204], // longitude, latitude
+          zoom: 14,
+          sliderStyle: "large"
+        });
+		var dynamicMapServiceLayer = new esri.layers.ArcGISDynamicMapServiceLayer("https://gis.sanantonio.gov/ArcGIS/rest/services/Demographics/MapServer");
+		dynamicMapServiceLayer.setVisibleLayers([1,2]);
+		map.addLayer(dynamicMapServiceLayer);
+		navigator.geolocation.getCurrentPosition(fetchLocation);
+      });
+      function fetchLocation(position) {
+          map.center = position.coords;
+      }
+</script>
+}
+<div id="map"></div>
+
