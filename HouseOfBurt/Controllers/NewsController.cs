@@ -32,10 +32,10 @@ namespace HouseOfBurt.Controllers
             return View("Index");
         }
 
-        public ActionResult Article(int articleId)
+        public ActionResult Article(string id)
         {
-            var newsArticle = DataService.Instance.Database.Articles.FirstOrDefault(x => x.ArticleId == articleId);
-            if (newsArticle == null) RedirectToAction("Index");
+            var newsArticle = DataService.Instance.Database.Articles.FirstOrDefault(x => x.Slug == id);
+            if (newsArticle == null) return RedirectToAction("Index");
             ViewBag.Article = newsArticle;
             return View();
         }

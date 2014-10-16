@@ -41,7 +41,7 @@
             <p>@Html.Raw(product.Description)</p>
 
             <br>
-            @Html.ActionLink("Read More", "Detail", new { @id = product.ProductId }, new { @class="btn btn-primary"})
+            @Html.ActionLink("Read More", "Detail", new { @id = product.Slug }, new { @class="btn btn-primary"})
         </div>
     }
 </div>

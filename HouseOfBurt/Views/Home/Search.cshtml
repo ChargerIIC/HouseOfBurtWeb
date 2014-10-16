@@ -11,9 +11,9 @@
 {
  foreach (Article article in ViewBag.Results)
  {
-     <h4>@Html.ActionLink(article.Title, "Detail", "News", new {id = article.ArticleId})</h4>
+     <h4>@Html.ActionLink(article.Title, "Article", "News", new { id = article.Slug })</h4>
      <p>@Html.Raw(article.getArticleSummary(400))</p>
-     @Html.ActionLink("Read More", "Detail", "News", new {id = article.ArticleId}, new {@class = "btn btn-primary"})
+     @Html.ActionLink("Read More", "Article", "News", new { id = article.Slug }, new { @class = "btn btn-primary" })
 
  }
 }

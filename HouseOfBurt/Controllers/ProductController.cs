@@ -19,10 +19,10 @@ namespace HouseOfBurt.Controllers
             return View();
         }
 
-        public ActionResult Detail(int id = 1)
+        public ActionResult Detail(string id)
         {
-            Product product = DataService.Instance.Database.Products.FirstOrDefault(x => x.ProductId == id);
-            if (product == null) RedirectToAction("Index");
+            Product product = DataService.Instance.Database.Products.FirstOrDefault(x => x.Slug == id);
+            if (product == null) return RedirectToAction("Index");
 
             ViewBag.Product = product;
             ViewBag.Links = product.SourceLink;
