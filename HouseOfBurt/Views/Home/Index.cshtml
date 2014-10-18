@@ -1,7 +1,7 @@
 ﻿
 @using Microsoft.Ajax.Utilities
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "House Of Burt Software Development";
 }
 
 @section Meta{
@@ -12,7 +12,7 @@
     <meta property="og:image" content="@Url.Content("~/Content/img/Logo.png")" @*@Request.Url.GetLeftPart(UriPartial.Authority) />Content/images/auction.jpg"*@ />
     <link rel="canonical" href="@Url.Action("Index", "Home", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = "Index" }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
 }
-
+<h1 class="hidden">@ViewBag.Title</h1>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
