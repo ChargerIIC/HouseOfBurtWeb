@@ -1,20 +1,14 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = ViewBag.Header;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @Styles.Render("~/Content/base/news")
 
 @section SideBarContent {
-@foreach (Article newsArticle in ViewBag.NewsItems)
+@foreach (var link in ViewBag.Links)
 {
-    if(newsArticle.Links.Any())
-    {
-        foreach (Link link in newsArticle.Links)
-        {
             <a href="@link.URL" class="list-group-item">@link.Caption</a>
-        }
-    }
 }
 }
 
@@ -27,7 +21,7 @@
     <link rel="canonical" href="@Url.Action("Index", "News", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = "News" }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
 }
 
-<div class="page-header"><h2>@ViewBag.Header</h2></div><br/>
+<div class="page-header"><h1>@ViewBag.Header</h1></div><br/>
 
 <div>
 
