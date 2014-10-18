@@ -19,7 +19,7 @@ namespace HouseOfBurt.Controllers
             ViewBag.NewsItems = articles;
             ViewBag.Header = "News Items";
             ViewBag.Links = articles.SelectMany(article => article.Links).ToList();
-            return View();
+            return View("Index");
         }
 
         public ActionResult Category(string category)
@@ -31,7 +31,7 @@ namespace HouseOfBurt.Controllers
             var newsItems = articles.Where(n => n.Tags.Contains(filter));
             if (!newsItems.Any()) newsItems = DataService.Instance.Database.Articles.ToList();
             ViewBag.NewsItems = newsItems;
-            ViewBag.Links = articles.SelectMany(article => article.Links).ToList();
+            ViewBag.Links = newsItems.SelectMany(a => a.Links).ToList();
             return View("Index");
         }
 

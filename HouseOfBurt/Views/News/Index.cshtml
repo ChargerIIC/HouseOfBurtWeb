@@ -7,9 +7,9 @@
 
 @section SideBarContent {
 @foreach (var link in ViewBag.Links)
-{
-            <a href="@link.URL" class="list-group-item">@link.Caption</a>
-}
+    {
+    <a href="@link.URL" class="list-group-item">@link.Caption</a>
+    }
 }
 
 @section Meta{
@@ -24,12 +24,11 @@
 <div class="page-header"><h1>@ViewBag.Header</h1></div><br/>
 
 <div>
-
     @foreach (Article newsArticle in ViewBag.NewsItems)
     {
         <div class="panel">
             <br/>
-            <img src=@Url.Content(newsArticle.PictureUrl) class="center-block" width="50%" />
+            <img src=@Url.Content(newsArticle.PictureUrl) class="center-block img-rounded" />
             <p></p>
             <h2>@newsArticle.Title</h2>
             <p></p>
