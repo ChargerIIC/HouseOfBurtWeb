@@ -39,25 +39,36 @@
 @section scripts
 {
     <script src="http://js.arcgis.com/3.11/"></script>
-<script>
+    <script>
     var map;
-    var latitude = 36.8081204;
-    var longitude = -119.8662133
-      require(["esri/map", "dojo/domReady!"], function(Map) {
+    var userPos;
+
+    require(["esri/map", "dojo/domReady!", "esri/geometry/Point", "esri/symbols/SimpleMarkerSymbol"], function (Map, Point, SimpleMarkerSymbol) {
         map = new Map("map", {
-          basemap: "streets",
-          center: [-119.8662133, 36.8081204], // longitude, latitude
-          zoom: 14,
-          sliderStyle: "large"
+            basemap: "streets",
+            center: [-119.773979, 36.758691], //Fresno Center
+            zoom: 13,
+            maxZoom: 20,
+            minZoom: 13,
+            sliderStyle: "large",
         });
-		var dynamicMapServiceLayer = new esri.layers.ArcGISDynamicMapServiceLayer("https://gis.sanantonio.gov/ArcGIS/rest/services/Demographics/MapServer");
-		dynamicMapServiceLayer.setVisibleLayers([1,2]);
-		map.addLayer(dynamicMapServiceLayer);
-		navigator.geolocation.getCurrentPosition(fetchLocation);
-      });
-      function fetchLocation(position) {
-          map.center = position.coords;
-      }
+        map.on("load", zoomToUserCoords);
+
+        var dynamicMapServiceLayer = new esri.layers.ArcGISDynamicMapServiceLayer("https://gis.sanantonio.gov/ArcGIS/rest/services/Demographics/MapServer");
+        dynamicMapServiceLayer.setVisibleLayers([1,2]);
+        map.addLayer(dynamicMapServiceLayer);
+
+        function zoomToUserCoords() {
+            navigator.geolocation.getCurrentPosition(fetchLocation);
+            map.zoom = 14;
+
+        }
+        function fetchLocation(position) {
+            map.center = position.coords;
+            userPos = position.coords;
+        }
+
+    });
 </script>
 }
 <div id="map"></div>
