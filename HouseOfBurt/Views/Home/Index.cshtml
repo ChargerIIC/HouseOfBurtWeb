@@ -39,7 +39,7 @@
                 }
                 <div class="container">
                      <div class="carousel-caption">
-                         <h1>@newsItem.Title</h1>
+                         <h2>@newsItem.Title</h2>
                          <p>@Html.Raw(newsItem.getArticleSummary(200))</p>
                          <p><a class="btn btn-lg btn-primary" href="@Url.Action("Article", "News", new {@id = newsItem.Slug})" role="button">Read More</a></p>
                     </div>
