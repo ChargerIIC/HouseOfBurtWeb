@@ -17,9 +17,9 @@
 <meta name="keywords" content="@ViewBag.Article.Keywords" />
 <meta property="og:description" content="@ViewBag.Article.getArticleSummary(50)" />
 <meta name="description" content="@ViewBag.Article.getArticleSummary(50)" />
-<meta property="og:url" content="@Url.Action("Article", "News", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = ViewBag.Article.Slug }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+<meta property="og:url" content="@Url.Action("Article", "News", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = ViewBag.Article.Slug }), Uri.UriSchemeHttp, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
 <meta property="og:image" content="@Url.Content(ViewBag.Article.PictureUrl)" />
-<link rel="canonical" href="@Url.Action("Article", "News", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = ViewBag.Article.Slug }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+<link rel="canonical" href="@Url.Action("Article", "News", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = ViewBag.Article.Slug }), Uri.UriSchemeHttp, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
 }
 
 <div class="panel">

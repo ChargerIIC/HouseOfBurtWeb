@@ -17,9 +17,9 @@
     <meta name="keywords" content="@ViewBag.Product.Keywords" />
     <meta property="og:description" content="@ViewBag.Product.ShortDescription" />
     <meta name="description" content="@ViewBag.Product.ShortDescription" />
-    <meta property="og:url" content="@Url.Action("Detail", "Product", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = ViewBag.Product.Slug, id = ViewBag.Product.ProductId }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
-    <meta property="og:image" content="@Url.Content(ViewBag.Product.ImageUrl)" @*@Request.Url.GetLeftPart(UriPartial.Authority) />Content/images/auction.jpg"*@ />
-    <link rel="canonical" href="@Url.Action("Detail", "Product", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = ViewBag.Product.Slug, id = ViewBag.Product.ProductId }), Uri.UriSchemeHttps, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+    <meta property="og:url" content="@Url.Action("Detail", "Product", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = ViewBag.Product.Slug, id = ViewBag.Product.ProductId }), Uri.UriSchemeHttp, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
+    <meta property="og:image" content="@Url.Content(ViewBag.Product.ImageUrl)" />
+    <link rel="canonical" href="@Url.Action("Detail", "Product", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = ViewBag.Product.Slug, id = ViewBag.Product.ProductId }), Uri.UriSchemeHttp, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
 }
 
 <div class="container-fluid panel">
