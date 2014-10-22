@@ -4,13 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using HouseOfBurt.Models;
+using HouseOfBurt.Utilities;
 
 namespace HouseOfBurt.Controllers
 {
     public class ProductController : Controller
     {
         // GET: Product
-        [OutputCache(Duration = 86400)]
+        [CompressFilter(Order = 1)]
+        [OutputCache(Duration = 86400, Order = 2)]
         public ActionResult Index()
         {
             var products = DataService.Instance.Database.Products;
@@ -19,6 +21,7 @@ namespace HouseOfBurt.Controllers
             return View();
         }
 
+        [CompressFilter]
         public ActionResult Detail(string id)
         {
             Product product = DataService.Instance.Database.Products.FirstOrDefault(x => x.Slug == id);
@@ -29,7 +32,8 @@ namespace HouseOfBurt.Controllers
             return View();
         }
 
-        [OutputCache(Duration = 86400)]
+        [CompressFilter(Order = 1)]
+        [OutputCache(Duration = 86400, Order = 2)]
         public ActionResult License()
         {
             return View();

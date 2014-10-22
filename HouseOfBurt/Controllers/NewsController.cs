@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using HouseOfBurt.Models;
+using HouseOfBurt.Utilities;
 
 namespace HouseOfBurt.Controllers
 {
@@ -12,7 +13,8 @@ namespace HouseOfBurt.Controllers
     {
 
         // GET: News
-        [OutputCache(Duration = 300)]
+        [CompressFilter(Order = 1)]
+        [OutputCache(Duration = 300, Order = 2)]
         public ActionResult Index()
         {
             var articles = DataService.Instance.Database.Articles.OrderByDescending(x => x.CreationDate).Take(10).ToList();
@@ -22,6 +24,7 @@ namespace HouseOfBurt.Controllers
             return View("Index");
         }
 
+        [CompressFilter]
         public ActionResult Category(string category)
         {
             Category filter = DataService.Instance.Database.Categories.FirstOrDefault(x => x.Caption == category);
@@ -35,6 +38,7 @@ namespace HouseOfBurt.Controllers
             return View("Index");
         }
 
+        [CompressFilter]
         public ActionResult Article(string id)
         {
             var newsArticle = DataService.Instance.Database.Articles.FirstOrDefault(x => x.Slug == id);

@@ -150,6 +150,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Services\EmailService.cs" />
+    <Compile Include="Utilities\CompressionFilter.cs" />
     <Compile Include="Utilities\StringUtility.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

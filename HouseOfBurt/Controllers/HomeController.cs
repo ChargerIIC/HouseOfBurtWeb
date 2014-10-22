@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HouseOfBurt.Utilities;
 
 namespace HouseOfBurt.Controllers
 {
     public class HomeController : Controller
     {
-        [OutputCache(Duration = 86400)]
+        [CompressFilter(Order = 1)]
+        [OutputCache(Duration = 86400, Order = 2)]
         public ActionResult Index()
         {
             //Grab top five news items
@@ -23,7 +25,8 @@ namespace HouseOfBurt.Controllers
             return View();
         }
 
-        [OutputCache(Duration = 86400)]
+        [CompressFilter(Order = 1)]
+        [OutputCache(Duration = 86400, Order = 2)]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -31,7 +34,8 @@ namespace HouseOfBurt.Controllers
             return View();
         }
 
-        [OutputCache(Duration = 86400)]
+        [CompressFilter(Order = 1)]
+        [OutputCache(Duration = 86400, Order = 2)]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -39,6 +43,7 @@ namespace HouseOfBurt.Controllers
             return View();
         }
 
+         [CompressFilter]
         public ActionResult Search(string search)
         {
             ViewBag.SearchTerm = search;
@@ -50,8 +55,9 @@ namespace HouseOfBurt.Controllers
             return View();
         }
 
-        [OutputCache(Duration = 86400)]
-        public ActionResult Resume()
+         [CompressFilter(Order = 1)]
+         [OutputCache(Duration = 86400, Order = 2)]
+         public ActionResult Resume()
         {
             return View();
         }

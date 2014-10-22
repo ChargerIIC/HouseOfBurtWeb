@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using HouseOfBurt.Models;
 using HouseOfBurt.Services;
+using HouseOfBurt.Utilities;
 
 namespace HouseOfBurt.Controllers
 {
@@ -34,6 +35,7 @@ namespace HouseOfBurt.Controllers
         #endregion Class Level Variables
 
         // GET: Application
+        [CompressFilter]
         public ActionResult Index()
         {
             ViewBag.WebApplications = DataService.Instance.Database.WebApplications.ToList();
