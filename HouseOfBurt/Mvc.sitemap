@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="Home" action="Index">
+    <mvcSiteMapNode title="Resume" controller="Home" action="Resume"/>
+    <mvcSiteMapNode title="News" controller="News" action="Article" dynamicNodeProvider="HouseOfBurt.Utilities.SiteMapProviders.ArticleDynamicNodeProvider, HouseOfBurt" />
+    <mvcSiteMapNode title="Products" controller="Product" action="Detail" dynamicNodeProvider="HouseOfBurt.Utilities.SiteMapProviders.ProductDynamicNodeProvider, HouseOfBurt" />
+    <mvcSiteMapNode title="Lisence" controller="Product" action="License"/>
+    <mvcSiteMapNode title="Fresno Population Map" controller="Application" action="FresnoPopulationMap"/>
+    <mvcSiteMapNode title="Context Is Needed" controller="Application" action="ContextIsNeeded"/>
+  </mvcSiteMapNode>
+</mvcSiteMap>

@@ -18,7 +18,7 @@
 <meta property="og:description" content="@ViewBag.Article.getArticleSummary(50)" />
 <meta name="description" content="@ViewBag.Article.getArticleSummary(50)" />
 <meta property="og:url" content="@Url.Action("Article", "News", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = ViewBag.Article.Slug }), Uri.UriSchemeHttp, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
-<meta property="og:image" content="@string.Concat("http://houseofburt.azurewebsites.net/", Url.Content(ViewBag.Product.ImageUrl))" />
+<meta property="og:image" content="@string.Concat("http://houseofburt.azurewebsites.net/", Url.Content(ViewBag.Article.PictureUrl))" />
 <link rel="canonical" href="@Url.Action("Article", "News", new RouteValueDictionary(new { area = ViewContext.RouteData.DataTokens["area"], slug = ViewBag.Article.Slug }), Uri.UriSchemeHttp, System.Configuration.ConfigurationManager.AppSettings["HostName"])" />
 }
 
